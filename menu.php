@@ -1,16 +1,5 @@
-<!doctype html>
-<html>
-<head>
-<meta charset="utf-8">
-<title>Untitled Document</title>
-<script src="js/jquery-1.11.2.min.js"></script>
-<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
-<script src="js/bootstrap.js"></script>
-</head>
-
-<body >
-      	<div class="navbar navbar-default ">
+<!-- ------------------------------------------------------------------- -->
+           	<div class="navbar navbar-default ">
             <div class="container-fluid">
             	<div class="navbar-header">
                 	<a href="#" class="navbar-brand"><i>Beauty</i></a>
@@ -39,9 +28,4 @@
                 </form>
                    </div>    
              </div>
-     
-           
-   
-      
-</body>
-</html>
+        <!-- ------------------------------------------------------------------- -->

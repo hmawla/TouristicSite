@@ -9,7 +9,7 @@
 <script src="js/bootstrap.js"></script>
 </head>
 
-<body >
+<body>
       	<div class="navbar navbar-default ">
             <div class="container-fluid">
             	<div class="navbar-header">
@@ -40,7 +40,7 @@
                    </div>    
              </div>
      
-           
+            <?php require_once('login.php'); ?>
    
       
 </body>
