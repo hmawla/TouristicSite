@@ -1,6 +1,15 @@
 .my-nav-style  {
     list-style: none;
     margin: 0 auto;
-    width: 70%;
+}
+.my-nav-style ul {
+	background: white;
+}
+
+.logo  {
+    font-size: 20px;
+	
+}
+.restcontent {
 	
 }

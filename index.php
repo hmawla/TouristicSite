@@ -11,13 +11,21 @@
 	</head>
 
 	<body >
-		<div class="my-nav-style" >
-			<ul class="nav nav-tabs">
-				<li role="presentation" class="active"><a href="#">Home</a></li>
-				<li role="presentation"><a href="#">Search</a></li>
-				<li role="presentation"><a href="#">Contact Us</a></li>
-				<li role="presentation"><a href="#">About</a></li>
-			</ul>
+		<div id="wrap">
+			<header id="header" class="my-nav-style navbar-fixed-top" role="banner" >
+				<ul class="nav nav-tabs ">
+					<li role="presentation"><a class="navbar-brand" href="#">GO TOUR</a></li>
+					<li role="presentation" class="active"><a href="#">Home</a></li>
+					<li role="presentation"><a href="#">Search</a></li>
+					<li role="presentation"><a href="#">Contact Us</a></li>
+					<li role="presentation"><a href="#">About</a></li>
+					<li role="presentation" class="active my-2 search_style"><input type="text" href="#"></a></li>
+				</ul>
+			</header>
+			
+			<div class="my-nav-style"  id="content" role="main">
+				<image src="images/green-landscape-11.jpg" />
+			</div>
 		</div>
 	</body>
 </html>
