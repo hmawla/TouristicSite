@@ -4,8 +4,8 @@
 		<meta charset="utf-8">
 		<title>Untitled Document</title>
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-<script type="text/javascript" src="jQuery/jquery.js"></script>
-<script type="text/javascript" src="jQuery/bootstrap.js"></script>
+		<script type="text/javascript" src="jQuery/jquery.js"></script>
+		<script type="text/javascript" src="jQuery/bootstrap.js"></script>
 	</head>
 
 	<body >
