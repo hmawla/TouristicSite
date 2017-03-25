@@ -73,18 +73,12 @@ $totalRows_rsLogin = mysqli_num_rows($rsLogin);
 		{
 					header('Location:adminpage.php');
 		}
-		elseif ($row_rsLogin['pertype'] == 'C')
+		elseif ($row_rsLogin['pertype'] == 'D')
 		{
-				header('Location:Customer.php');	
+				header('Location:Adverpage.php');	
 		}
-		elseif ($row_rsLogin['pertype'] == 'E')
-		{
-				header('Location:Employee.php');	
-		}	
-			elseif ($row_rsLogin['pertype'] == 'M')
-		{
-				header('Location:Employee.php');	
-		}	
+	
+	
 	}
 	else
 	{
@@ -92,16 +86,9 @@ $totalRows_rsLogin = mysqli_num_rows($rsLogin);
 	}
 }
 ?>
-<link href="css/bootstrap.css" rel="stylesheet" type="text/css" />
-
-
-
-<div style="margin-top:50px;" align="center"  >
 <div><font color="#D70000" size="+3"><?php echo $error ?></font> </div>
-
 <form class="form-horizontal" method="post" >
     <div class="col-sm-4">
-    <h1 align="center" style="font-family:'Comic Sans MS', cursive">Login</h1><br />
          <input type="text" class="input-large" name="username" id="username" placeholder="Your Username" />
          <br /><br />
    
@@ -109,7 +96,5 @@ $totalRows_rsLogin = mysqli_num_rows($rsLogin);
          <div class="form-group input-group">
          <br /><input type="submit" class="btn-success"  name="login" id="login" value="login" />
     </div>
-    
     </div>
     </form>
-</div>
