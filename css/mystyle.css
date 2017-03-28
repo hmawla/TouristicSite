@@ -12,9 +12,10 @@
 }
 .changesize {
   max-height: 50px;
+  
   border: 1px solid transparent;
 }
 .changecolor {
-  background-color: #fff;
-  border-color: #080808;
+  background-color: #ffffff;
+  border-color: #00bbff;
 }

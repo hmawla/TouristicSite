@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <!-- ------------------------------------------------------------------- -->
 
-<nav class="navbar navbar-inverse navbar-fixed-top ">
+<nav class="navbar navbar-inverse navbar-fixed-top changecolor ">
 
     <div class="container">
         <div class="navbar-header">
-			<image src="images/EBay_logo.png" class="changesize" href="#" />
+			<image src="images/logo1.png" class="changesize" href="#" />
 			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 			<span class="sr-only">Toggle navigation</span>
             <span class="icon-bar"></span>
