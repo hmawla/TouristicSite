@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <!-- ------------------------------------------------------------------- -->
 
-<nav class="navbar navbar-inverse navbar-fixed-top changecolor ">
+<nav class="navbar navbar-default navbar-fixed-top changecolor ">
 
     <div class="container">
         <div class="navbar-header">
@@ -18,7 +18,7 @@
 			<div>
 				<ul class="nav navbar-nav">
 					
-					<li class="active"><a href="#">Home</a></li>
+					<li class="active" ><a href="#">Home</a></li>
 					<li><a href="#">About</a></li>
 					<li><a href="#">Contact</a></li>
 				</ul>

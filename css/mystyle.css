@@ -17,5 +17,14 @@
 }
 .changecolor {
   background-color: #ffffff;
-  border-color: #00bbff;
+}
+.changecolor {
+  background-color: #ffffff;
+  border-bottom: 2px solid #00bbff;
+}
+.changecolor > div ul li:hover{
+  background-color: #00ccff;
+}
+.changecolor .navbar-collapse .navbar-nav > .active > a {
+  background-color: #00bbff;
 }
