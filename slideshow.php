@@ -1,10 +1,10 @@
 
 
 <div class="w3-content w3-display-container">
-  <img class="mySlides" src="images/1" style="width:100%;height:100%">
-  <img class="mySlides" src="images/2" style="width:100%;height:100%">
-  <img class="mySlides" src="images/3" style="width:100%;height:100%">
-  <img class="mySlides" src="images/4" style="width:100%;height:100%">
+  <img class="mySlides" src="images/1.jpg" style="width:100%;height:100%">
+  <img class="mySlides" src="images/2.jpg" style="width:100%;height:100%">
+  <img class="mySlides" src="images/3.jpg" style="width:100%;height:100%">
+  <img class="mySlides" src="images/4.jpg" style="width:100%;height:100%">
 
   <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
   <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
@@ -40,6 +40,6 @@ function carousel() {
     slideIndex++;
     if (slideIndex > x.length) {slideIndex = 1} 
     x[slideIndex-1].style.display = "block"; 
-    setTimeout(carousel, 2000); // Change image every 2 seconds
+    setTimeout(carousel, 3000); // Change image every 2 seconds
 }
 </script>
