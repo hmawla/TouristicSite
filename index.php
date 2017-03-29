@@ -13,6 +13,15 @@
 	</head>
 
 	<body >
+		<script>
+			$(window).scroll(function() {
+				var height = $(window).scrollTop();
+
+				if(height  > some_number) {
+					// do something
+				}
+			});
+		</script>
 		<div>
 			<div>
 				<?php require_once("menu.php")?>
@@ -21,21 +30,25 @@
 				<br><br>
 				<?php require_once("slideshow.php")?>
 			</div>
-			<nav class="navbar navbar-default changecolor">
-				<div id="navbar" class="navbar-collapse collapse">
-					<ul class="nav navbar-nav">
-						<li class="active"><a href="#">All</a></li>
-						<li><a href="#">112321</a></li>
-						<li><a href="#">11321</a></li>
-						<li><a href="#">1123123</a></li>
-						<li><a href="#">1231231</a></li>
-						<li><a href="#">1231231</a></li>
-						<li><a href="#">1231231</a></li>
-					</ul>
-				</div>
-			</nav>
+			<div>
+				<nav class="navbar navbar-default changecolor">
+					<div id="navbar" class="navbar-collapse collapse">
+						<ul class="nav navbar-nav">
+							<li class="active"><a href="#">All</a></li>
+							<li><a href="#">112321</a></li>
+							<li><a href="#">11321</a></li>
+							<li><a href="#">1123123</a></li>
+							<li><a href="#">1231231</a></li>
+							<li><a href="#">1231231</a></li>
+							<li><a href="#">1231231</a></li>
+						</ul>
+					</div>
+				</nav>
+				<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+				<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+			</div>
+			
 			<div style="margin:auto">
-				
 				<?php require_once("about.php")?>
 			</div>
 		</div>
