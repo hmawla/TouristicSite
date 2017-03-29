@@ -8,15 +8,25 @@
 		<link rel="stylesheet" type="text/css" href="css/mystyle.css">
 		<script type="text/javascript" src="jQuery/jquery.js"></script>
 		<script type="text/javascript" src="jQuery/bootstrap.js"></script>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="css/more.css">
 	</head>
 
 	<body >
 		<div>
-			<?php require_once("menu.php")?>
+			<div>
+				<?php require_once("menu.php")?>
+			</div>
+			<div style="padding:10px;">
+				<br><br>
+				<?php require_once("slideshow.php")?>
+			</div>
+			<div style="margin:auto">
+				
+				<?php require_once("about.php")?>
+			</div>
 		</div>
-        <div class="my-nav-style"  id="content" role="main">
-			<image style="min-height:120px" src="images/green-landscape-11.jpg" />
-		</div>
+		
             
            
 	</body>
