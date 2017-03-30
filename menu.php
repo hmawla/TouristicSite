@@ -19,12 +19,12 @@
 				<ul class="nav navbar-nav">
 					
 					<li class="active" ><a href="#">Home</a></li>
-					<li><a href="About.php">About</a></li>
+					<li><a onclick="scrollWin()" href="#scrollWin()">About</a></li>
 					<li><a href="#">Contact</a></li>
 				</ul>
 				<form class="navbar-form navbar-right">
 					<div class="form-group">
-						<input type="text" placeholder="Search" class="form-control">
+						<input id="searcher" type="text" placeholder="Search" class="form-control">
 					</div>
 					<button type="submit" class="btn btn-success">Search</button>
 				</form>

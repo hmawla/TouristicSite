@@ -16,31 +16,49 @@
 		<script>
 			$(window).scroll(function() {
 				var height = $(window).scrollTop();
-
-				if(height  > some_number) {
-					// do something
+				document.getElementById("searcher").placeholder = height;
+				if(height  < 575 ){
+					document.getElementById("cat-nav").className = "navbar navbar-default changecolor";
+					document.getElementById("cat-nav").style = "";
+					document.getElementById("aboutid").style = "margin:auto;";
+					
+				}
+				else if(height  < 1300 ){
+					document.getElementById("cat-nav").className = "navbar navbar-default navbar-fixed-top changecolor";
+					document.getElementById("cat-nav").style = "top:52px;";
+					document.getElementById("aboutid").style = "padding-top: 72px; margin:auto;";
+				}
+				else {
+					document.getElementById("cat-nav").className = "navbar navbar-default changecolor";
+					document.getElementById("cat-nav").style = "";
+					document.getElementById("aboutid").style = "margin:auto;";
 				}
 			});
+			function scrollWin() {
+				var height = $(window).scrollTop();
+				
+				window.scrollBy(0, 1369-height);
+			}
 		</script>
 		<div>
 			<div>
 				<?php require_once("menu.php")?>
 			</div>
-			<div style="padding:10px;">
+			<div id="slideshowid" style="padding-top: 20px; padding-bottom:20px;">
 				<br><br>
 				<?php require_once("slideshow.php")?>
 			</div>
 			<div>
-				<nav class="navbar navbar-default changecolor">
+				<nav style="" id="cat-nav" class="navbar navbar-default changecolor">
 					<div id="navbar" class="navbar-collapse collapse">
 						<ul class="nav navbar-nav">
 							<li class="active"><a href="#">All</a></li>
-							<li><a href="#">112321</a></li>
-							<li><a href="#">11321</a></li>
-							<li><a href="#">1123123</a></li>
-							<li><a href="#">1231231</a></li>
-							<li><a href="#">1231231</a></li>
-							<li><a href="#">1231231</a></li>
+							<li><a href="#">CAT1</a></li>
+							<li><a href="#">CAT2</a></li>
+							<li><a href="#">CAT3</a></li>
+							<li><a href="#">CAT4</a></li>
+							<li><a href="#">CAT5</a></li>
+							<li><a href="#">CAT6</a></li>
 						</ul>
 					</div>
 				</nav>
@@ -48,7 +66,7 @@
 				<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 			</div>
 			
-			<div style="margin:auto">
+			<div id="aboutid" style="margin:auto;">
 				<?php require_once("about.php")?>
 			</div>
 		</div>
