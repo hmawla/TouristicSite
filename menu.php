@@ -15,16 +15,12 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
 			<div>
-				<ul class="nav navbar-nav">
+				<ul class="nav navbar-nav changecolor1">
 					
 					<li class="active" ><a href="#">Home</a></li>
 					<li><a onclick="scrollWin()" href="#scrollWin()">About</a></li>
 					<li><a href="#">Contact</a></li>
-					
-				</ul>
-				<form class="navbar-form navbar-right">
-					<ul class="nav navbar-nav">
-						<li class="dropdown">
+					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
 						<ul id="login-dp" class="dropdown-menu">
 							<li>
@@ -35,7 +31,7 @@
 											<a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
 											<a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
 										</div>
-										or
+										Or
 										<form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
 											<div class="form-group">
 												<label class="sr-only" for="exampleInputEmail2">Email address</label>
@@ -57,18 +53,19 @@
 										</form>
 									</div>
 									<div class="bottom text-center">
-										New here ? <a href="Registration.php"><b>Join Us</b></a>
+										New Here? <a href="Registration.php"><b>Join Us</b></a>
 									</div>
 								</div>
 							</li>
 						</ul>
 					</li>
+				</ul>*
+					<form class="navbar-form navbar-right">
 						<div class="form-group">
 							<input id="searcher" type="text" placeholder="Search" class="form-control">
 						</div>
 						<button type="submit" class="btn btn-success">Search</button>
-					</ul>
-				</form>
+					</form>
 			</div>
         </div>
     </div>

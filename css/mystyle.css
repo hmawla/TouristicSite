@@ -12,14 +12,13 @@
 }
 .changesize {
   max-height: 50px;
-  
   border: 1px solid transparent;
 }
 .changecolor {
   background-color: #ffffff;
   border-bottom: 2px solid #00bbff;
 }
-.changecolor > div ul li:hover{
+.changecolor1 > li:hover{
   background-color: #00ccff;
 }
 .changecolor .navbar-collapse .navbar-nav > .active > a {
