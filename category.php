@@ -14,6 +14,91 @@
 		</ul>
 	</div>
 </nav>
-				<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-				<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<div class="row">
+<div class="col-lg-4 col-md-6 sb-preview text-center">
+	<div class="card h-100">
+		<a class="sb-preview-img" href="https://startbootstrap.com/template-overviews/agency">
+			<img class="card-img-top img-fluid" src="images/agency.jpg" alt="SORY FOR main">
+		</a>
+	<div class="card-block">
+			<h4 class="card-title">cat1</h4>
+			<p class="card-text">A one page agency theme.</p>
+	</div>
+	<div class="card-footer">
+			<a href="https://startbootstrap.com/template-overviews/agency" class="btn btn-secondary">Preview &amp; shop</a>
+	</div>
+	</div>
+	</div>
+	<div class="col-lg-4 col-md-6 sb-preview text-center">
+	<div class="card h-100">
+		<a class="sb-preview-img" href="https://startbootstrap.com/template-overviews/agency">
+			<img class="card-img-top img-fluid" src="images/agency.jpg" alt="SORY FOR main">
+		</a>
+	<div class="card-block">
+			<h4 class="card-title">cat1</h4>
+			<p class="card-text">A one page agency theme.</p>
+	</div>
+	<div class="card-footer">
+			<a href="https://startbootstrap.com/template-overviews/agency" class="btn btn-secondary">Preview &amp; shop</a>
+	</div>
+	</div>
+	</div>
+	<div class="col-lg-4 col-md-6 sb-preview text-center">
+	<div class="card h-100">
+		<a class="sb-preview-img" href="https://startbootstrap.com/template-overviews/agency">
+			<img class="card-img-top img-fluid" src="images/agency.jpg" alt="SORY FOR main">
+		</a>
+	<div class="card-block">
+			<h4 class="card-title">cat1</h4>
+			<p class="card-text">A one page agency theme.</p>
+	</div>
+	<div class="card-footer">
+			<a href="https://startbootstrap.com/template-overviews/agency" class="btn btn-secondary">Preview &amp; shop</a>
+	</div>
+	</div>
+	</div>
+	<div class="col-lg-4 col-md-6 sb-preview text-center">
+	<div class="card h-100">
+		<a class="sb-preview-img" href="https://startbootstrap.com/template-overviews/agency">
+			<img class="card-img-top img-fluid" src="images/agency.jpg" alt="SORY FOR main">
+		</a>
+	<div class="card-block">
+			<h4 class="card-title">cat1</h4>
+			<p class="card-text">A one page agency theme.</p>
+	</div>
+	<div class="card-footer">
+			<a href="https://startbootstrap.com/template-overviews/agency" class="btn btn-secondary">Preview &amp; shop</a>
+	</div>
+	</div>
+	</div>
+	<div class="col-lg-4 col-md-6 sb-preview text-center">
+	<div class="card h-100">
+		<a class="sb-preview-img" href="https://startbootstrap.com/template-overviews/agency">
+			<img class="card-img-top img-fluid" src="images/agency.jpg" alt="SORY FOR main">
+		</a>
+	<div class="card-block">
+			<h4 class="card-title">cat1</h4>
+			<p class="card-text">A one page agency theme.</p>
+	</div>
+	<div class="card-footer">
+			<a href="https://startbootstrap.com/template-overviews/agency" class="btn btn-secondary">Preview &amp; shop</a>
+	</div>
+	</div>
+	</div>
+	<div class="col-lg-4 col-md-6 sb-preview text-center">
+	<div class="card h-100">
+		<a class="sb-preview-img" href="https://startbootstrap.com/template-overviews/agency">
+			<img class="card-img-top img-fluid" src="images/agency.jpg" alt="SORY FOR main">
+		</a>
+	<div class="card-block">
+			<h4 class="card-title">cat1</h4>
+			<p class="card-text">A one page agency theme.</p>
+	</div>
+	<div class="card-footer">
+			<a href="https://startbootstrap.com/template-overviews/agency" class="btn btn-secondary">Preview &amp; shop</a>
+	</div>
+	</div>
+	</div>
+	</div>
+	
 <!-- ------------------------------------------------------------------- -->
