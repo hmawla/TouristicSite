@@ -89,7 +89,7 @@ section {
 section#contact .section-heading {
     color: white;
 }
-section#contact .form-group {
+/*section#contact .form-group {
     margin-bottom: 25px;
 }
 section#contact .form-group input,
@@ -101,7 +101,7 @@ section#contact .form-group input.form-control {
 }
 section#contact .form-group textarea.form-control {
     height: 236px;
-}
+}*/
 section#contact .form-control:focus {
     border-color: #fed136;
     box-shadow: none;
@@ -212,9 +212,9 @@ section#contact .text-danger {
   border-right: 1px solid #B29999;
 }
 
-.form-group{
+/*.form-group{
   margin-top: 10px;
-}
+}*/
 label{
   font-size: 1.3em;
   line-height: 1em;
@@ -247,7 +247,7 @@ section {
 section#contact .section-heading {
     color: white;
 }
-section#contact .form-group {
+/*section#contact .form-group {
     margin-bottom: 25px;
 }
 section#contact .form-group input,
@@ -259,7 +259,7 @@ section#contact .form-group input.form-control {
 }
 section#contact .form-group textarea.form-control {
     height: 236px;
-}
+}*/
 section#contact .form-control:focus {
     border-color: #fed136;
     box-shadow: none;
@@ -353,9 +353,9 @@ section#contact .text-danger {
 #login-dp .social-buttons a{
     width: 49%;
 }
-#login-dp .form-group {
+/*#login-dp .form-group {
     margin-bottom: 10px;
-}
+}*/
 .btn-fb{
     color: #fff;
     background-color:#3b5998;
