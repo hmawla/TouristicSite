@@ -17,9 +17,6 @@
 }
 .changecolor {
   background-color: #ffffff;
-}
-.changecolor {
-  background-color: #ffffff;
   border-bottom: 2px solid #00bbff;
 }
 .changecolor > div ul li:hover{
