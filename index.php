@@ -46,6 +46,7 @@
 				<?php require_once("menu.php")?>
 			</div>
 			<div id="slideshowid" style="padding-top: 20px; padding-bottom:20px;">
+				<br><br>
 				<?php require_once("slideshow.php")?>
 			</div>
 			<div>
