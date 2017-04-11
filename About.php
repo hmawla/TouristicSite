@@ -1,5 +1,16 @@
-<!doctype html>
+<!DOCTYPE html>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body>
+
 <div class="container">
+  <button  id="openabout" type="button" class="btn btn-info" data-toggle="collapse" data-target="#demo" style="width:100%;">About</button>
+  <div id="demo" class="collapse">
+    <div class="container">
 	<div style="border-bottom: 2px solid #00BBFF; border-top: 2px solid #00BBFF; box-shadow: 0 0 10px #9ecaed; bacground:white;">
 		<h1 style="text-align:center;font-family:Berlin Sans FB Demi;"><span class="glyphicon glyphicon glyphicon-info-sign" aria-hidden="true"></span><br>About</h1>
 
@@ -12,3 +23,6 @@
 		<p>
 	</div>
 </div>
+  </div>
+</div>
+
