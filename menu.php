@@ -24,14 +24,7 @@
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
 						<ul id="login-dp" class="dropdown-menu">
 							<li>
-								<div class="row">
-									<div class="col-md-12">
-										Login via
-										<div class="social-buttons">
-											<a href="#" class="btn btn-fb"><i class="fa fa-facebook"></i> Facebook</a>
-											<a href="#" class="btn btn-tw"><i class="fa fa-twitter"></i> Twitter</a>
-										</div>
-										Or
+								<div class="row" style="padding:4px;">
 										<form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
 											<div class="form-group">
 												<label class="sr-only" for="exampleInputEmail2">Email address</label>
@@ -45,15 +38,11 @@
 											<div class="form-group">
 												<button type="submit" class="btn btn-primary btn-block">Sign in</button>
 											</div>
-											<div class="checkbox">
-												<label>
-													<input type="checkbox"> keep me logged-in
-												</label>
-											</div>
+											
 										</form>
 									</div>
 									<div class="bottom text-center">
-										New Here? <a href="Registration.php"><b>Join Us</b></a>
+										New Here? <a href="Registration1111.php"><b>Join Us</b></a>
 									</div>
 								</div>
 							</li>
