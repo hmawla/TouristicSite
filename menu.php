@@ -21,7 +21,7 @@
 					<li><a onclick="scrollWin()" href="#scrollWin()">About</a></li>
 					<li><a href="#">Contact</a></li>
 					<li class="dropdown">
-						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Login<span class="caret"></span></a>
 						<ul id="login-dp" class="dropdown-menu">
 							<li>
 								<div class="row" style="padding:4px;">
@@ -48,7 +48,7 @@
 							</li>
 						</ul>
 					</li>
-				</ul>*
+				</ul>
 					<form class="navbar-form navbar-right">
 						<div class="form-group">
 							<input id="searcher" type="text" placeholder="Search" class="form-control">

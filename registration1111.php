@@ -154,12 +154,13 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) {
     </div>
 </nav>
 <!-- ------------------------------------------------------------------- -->
-<br><br>
+<br><br><br>
+<p style="text-align:center;font-size: 40px;;font-family:FontAwesome;color:grey;">Signup For Advertisement <p>
 <form class="form-horizontal" >
+
 <fieldset>
 
 <!-- Form Name -->
-<legend>registration</legend>
 
 <!-- Text input-->
 <div class="form-group">
@@ -181,9 +182,9 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) {
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="cmpny">Company</label>  
+  <label class="col-md-4 control-label" for="cmpny">father</label>  
   <div class="col-md-4">
-  <input id="cmpny" name="cmpny" type="text" placeholder="company" class="form-control input-md" required="">
+  <input id="father" name="father" type="text" placeholder="father-name" class="form-control input-md" required="">
     
   </div>
 </div>
@@ -192,122 +193,75 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) {
 <div class="form-group">
   <label class="col-md-4 control-label" for="email">Email</label>  
   <div class="col-md-4">
-  <input id="email" name="email" type="text" placeholder="email" class="form-control input-md" required="">
+  <input id="email" name="email" type="email" placeholder="Email-Address" class="form-control input-md" required="">
     
   </div>
 </div>
 
+<!-- Text area-->
+<div class="form-group">
+  <label class="col-md-4 control-label" for="add">Address</label>  
+  <div class="col-md-4">
+ <!-- <input id="add" name="add" type="textarea" placeholder="ex:country,city,town" class="form-control" required="">-->
+    <textarea class="form-control" placeholder="ex:country,city,town" id="add" required=""></textarea>
+  </div>
+</div>
+
+
+
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="add1">Address 1</label>  
+  <label class="col-md-4 control-label" for="dob">DOB</label>  
   <div class="col-md-4">
-  <input id="add1" name="add1" type="text" placeholder="" class="form-control input-md" required="">
+  <input id="dob" name="dob" type="Date" placeholder="your birth date" class="form-control input-md" required="">
     
   </div>
 </div>
 
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="add2">Address 2</label>  
-  <div class="col-md-4">
-  <input id="add2" name="add2" type="text" placeholder="" class="form-control input-md">
-    
-  </div>
-</div>
+
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="city">City</label>  
+  <label class="col-md-4 control-label" for="phone">Phone</label>  
   <div class="col-md-4">
-  <input id="city" name="city" type="text" placeholder="city" class="form-control input-md" required="">
-    
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="zip">Zip Code</label>  
-  <div class="col-md-4">
-  <input id="zip" name="zip" type="text" placeholder="Zip Code" class="form-control input-md" required="">
-    
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="ctry">Country</label>  
-  <div class="col-md-4">
-  <input id="ctry" name="ctry" type="text" placeholder="Country" class="form-control input-md" required="">
-    
-  </div>
-</div>
-
-<!-- Text input-->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="phone">Text InputPhone</label>  
-  <div class="col-md-4">
-  <input id="phone" name="phone" type="text" placeholder="Phone#" class="form-control input-md" required="">
+  <input id="phone" name="phone" type="number" placeholder="Phone#" class="form-control input-md" required="">
     
   </div>
 </div>
 
 <!-- Multiple Radios (inline) -->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="Training">Would you like to attend our Networking Reception on September 3, 2015?</label>
+  <label class="col-md-4 control-label" for="gender">Gender</label>
   <div class="col-md-4"> 
     <label class="radio-inline" for="Training-0">
-      <input type="radio" name="Training" id="Training-0" value="yes" checked="checked">
-      Yes
+      <input type="radio" name="M" id="M" value="m" checked="checked">
+      Male
     </label> 
-    <label class="radio-inline" for="Training-1">
-      <input type="radio" name="Training" id="Training-1" value="no">
-      No
+    <label class="radio-inline" for="f">
+      <input type="radio" name="f" id="f" value="f">
+      Female
     </label>
   </div>
 </div>
 
-<!-- Multiple Radios (inline) -->
-<div class="form-group">
-  <label class="col-md-4 control-label" for="Networking_Reception">Would you like to attend our Technical Product Update Session on September 4, 2015?</label>
-  <div class="col-md-4"> 
-    <label class="radio-inline" for="Networking_Reception-0">
-      <input type="radio" name="Networking_Reception" id="Networking_Reception-0" value="meet_yes" checked="checked">
-      Yes
-    </label> 
-    <label class="radio-inline" for="Networking_Reception-1">
-      <input type="radio" name="Networking_Reception" id="Networking_Reception-1" value="meet_no">
-      No
-    </label>
-  </div>
-</div>
 
-<!-- Select Basic -->
+<!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="selectbasic">Select Basic</label>
+  <label class="col-md-4 control-label" for="phone">user-name</label>  
   <div class="col-md-4">
-    <select id="selectbasic" name="selectbasic" class="form-control input-md">
-      <option>Option one</option>
-      <option>Option two</option>
-    </select>
+  <input id="uname" name="uname" type="text" placeholder="user-name" class="form-control input-md" required="" min="5">
+    
   </div>
 </div>
 
-
-<!-- Multiple Radios (inline) -->
+<!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="Dinner">Would you like to attend our Networking Dinner on September 4, 2015?</label>
-  <div class="col-md-4"> 
-    <label class="radio-inline" for="Dinner-0">
-      <input type="radio" name="Dinner" id="Dinner-0" value="dinner_yes" checked="checked">
-      Yes
-    </label> 
-    <label class="radio-inline" for="Dinner-1">
-      <input type="radio" name="Dinner" id="Dinner-1" value="dinner_no">
-      No
-    </label>
+  <label class="col-md-4 control-label" for="phone">Password</label>  
+  <div class="col-md-4">
+  <input id="pass" name="pass" type="password" placeholder="more than 6 characters" class="form-control input-md" required="" min="6">
+    
   </div>
 </div>
-
 <!-- Button -->
 <div class="form-group">
   <label class="col-md-4 control-label" for="submit"></label>
