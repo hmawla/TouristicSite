@@ -1,12 +1,4 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-<title>Viticulture an Agriculture Category Flat Bootstrap Responsive Website Template | Portfolio :: w3layouts</title>
-<!-- custom-theme -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Viticulture Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
 <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
 		function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- //custom-theme -->
@@ -16,15 +8,10 @@ Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, Sony
 <script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
 <!-- //js -->
 <link rel="stylesheet" href="css/colorbox.css" />
-<!-- font-awesome-icons -->
-<link href="css/font-awesome.css" rel="stylesheet"> 
-<!-- //font-awesome-icons -->
-<link href="//fonts.googleapis.com/css?family=Dosis:200,300,400,500,600,700,800&amp;subset=latin-ext" rel="stylesheet">
-<link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
-</head>
+
 <div class="services">
 		<div class="container">
-			<h3 class="w3l_header w3_agileits_header1">Our <span>Portfolio</span></h3>
+	
 			<div class="wthree_services_grids">	
 				<ul class="simplefilter">
 					<li class="active" data-filter="all">All</li>
