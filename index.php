@@ -17,7 +17,13 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		
 	</head>
-
+	<style>
+		body{
+		background-image: url("images/background.jpg");
+		background-repeat: no-repeat;
+		background-size:100% 80%
+		}
+	</style>
 	<body >
 		<script>
 			$(window).scroll(function() {
