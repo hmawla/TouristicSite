@@ -49,11 +49,11 @@ ul.simplefilter {
 	cursor: pointer;
 	display: inline-block;
 	text-transform: uppercase;
-	
+	border-radius: 25px; 
 	padding: 0.8em 2em;
 	margin: 0 0.3em;
 	
-    background-color: white;
+    background-color: #f9feff;
 }
 .simplefilter li.active,.simplefilter li:hover {
     background-color: #00bbff;
@@ -75,6 +75,9 @@ ul.simplefilter {
 					<li data-filter="1">Category 1</li>
 					<li data-filter="2">Category 2</li>
 					<li data-filter="3">Category 3</li>
+					<li data-filter="3">Category 4</li>
+					<li data-filter="3">Category 5</li>
+					<li data-filter="3">Category 6</li>
 				</ul>
 				<div class="filtr-container">
 					<div class="col-md-4 col-sm-4 filtr-item" data-category="1" data-sort="">
