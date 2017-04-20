@@ -117,8 +117,8 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) {
 				<ul class="nav navbar-nav changecolor1">
 					
 					<li><a href="index.php">Home</a></li>
-					<li><a href="#">About</a></li>
-					<li><a href="#">Contact</a></li>
+					<li ><a href="#">About</a></li>
+					<li ><a href="#">Contact</a></li>
 					<li class="dropdown active">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown"><b>Login</b> <span class="caret"></span></a>
 						<ul id="login-dp" class="dropdown-menu">

@@ -12,6 +12,8 @@
 		<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
 		<script type="text/javascript" src="js/jquery.filterizr.js"></script>
 		<script type="text/javascript" src="js/controls.js"></script>
+		<script src="js/jquery.filterizr.js"></script>  
+	    <script src="js/controls.js"></script>
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 
@@ -20,7 +22,7 @@
 			$(window).scroll(function() {
 				var height = $(window).scrollTop();
 				document.getElementById("searcher").placeholder = height;
-				if(height  < 589 ){
+				if(height  < 578 ){
 					document.getElementById("cat-nav").className = "navbar navbar-default changecolor";
 					document.getElementById("cat-nav").style = "";
 					document.getElementById("aboutid").style = "margin:auto;";
@@ -56,14 +58,14 @@
 				<?php require_once("category.php")?>
 			</div>
 			
+            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+					<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+					<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
 			<div id="aboutid" style="margin:auto;">
 				<?php require_once("about.php")?>
 			</div>
 		</div>
-		
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-					<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-					<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+		<br><br>
            <div>
 				<?php require_once("contactus.php")?>
 			</div>
