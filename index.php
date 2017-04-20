@@ -4,12 +4,11 @@
 		<meta charset="utf-8">
 		<title>Untitled Document</title>
 		
-		
-		<link rel="stylesheet" type="text/css" href="css/style.css"   media="all" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/colorbox.css" />
-		<link rel="stylesheet" type="text/css" href="css/more.css" />
+		
 		<link rel="stylesheet" type="text/css" href="css/mystyle.css" />
 		
 		

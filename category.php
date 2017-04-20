@@ -1,9 +1,74 @@
 <!DOCTYPE html>
 
-</head>
+<style>
+.w3l_header{
+	font-size: 1.5em;
+    color: #212121;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    position: relative;
+}
+.w3l_header span{
+	color:#00ba66;
+}
+.w3l_header:after{
+	content: '';
+    background: #212121;
+    height: 2px;
+    width: 13%;
+    left: 14%;
+    position: absolute;
+    top: 49%;
+}
+.w3_agileits_header1:after{
+	left:20% !important;
+}
+
+.banner-bottom,.testimonials,.services,.service-bottom,.stats-bottom{
+	padding:5em 0;
+}
+.agileits_banner_bottom_grids,.w3layouts_work_grids,.wthree_testimonial_grids,.wthree_services_grids,.w3layouts_mail_grid{
+	margin:3em 0 0;
+}
+
+input[type="submit"],input[type="reset"],a,.agileinfo_services_grid1_pos,.agileinfo_services_grid1 h4,.simplefilter li{
+	-webkit-transition: 0.5s ease-in;
+    -moz-transition: 0.5s ease-in;
+    -ms-transition: 0.5s ease-in;
+    -o-transition: 0.5s ease-in;
+    transition:0.5s ease-in;
+}
+ul.simplefilter {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.simplefilter li {
+	color: black;
+	border-bottom: 3px solid #00bbff;
+	cursor: pointer;
+	display: inline-block;
+	text-transform: uppercase;
+	
+	padding: 0.8em 2em;
+	margin: 0 0.3em;
+	
+    background-color: white;
+}
+.simplefilter li.active,.simplefilter li:hover {
+    background-color: #00bbff;
+	border-bottom: 3px solid grey
+}
+.agileits_banner_bottom_grids,.w3layouts_work_grids,.wthree_testimonial_grids,.wthree_services_grids,.w3layouts_mail_grid{
+	margin:3em 0 0;
+}
+.filtr-item {
+    padding: 1em;
+}
+
+</style>
 <div class="services">
 		<div class="container">
-			<h3 class="w3l_header w3_agileits_header1">Our <span>Portfolio</span></h3>
 			<div class="wthree_services_grids">	
 				<ul class="simplefilter">
 					<li class="active" data-filter="all">All</li>
