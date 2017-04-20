@@ -9,6 +9,7 @@
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css" />
 		<link rel="stylesheet" type="text/css" href="css/colorbox.css" />
+		<link rel="stylesheet" type="text/css" href="css/more.css" />
 		<link rel="stylesheet" type="text/css" href="css/mystyle.css" />
 		
 		
@@ -51,22 +52,41 @@
 			<div>
 				<?php require_once("menu.php")?>
 			</div>
-			<div id="slideshowid" style="padding-top: 20px; padding-bottom:20px;">
-				<br><br>
-				<?php require_once("slideshow.php")?>
-			</div>
-			<div>
-				<?php require_once("category.php")?>
-			</div>
+			<table class="container">
+				<tr>
+					<td>AD HOLDER</td>
+					
+					<td><div id="slideshowid" style="padding-top: 20px; padding-bottom:20px;">
+							<br><br>
+							<?php require_once("slideshow.php")?>
+						</div>
+					</td>
+					
+					<td>AD HOLDER</td>
+				</tr>
+				<tr>
+					<td>AD HOLDER</td>
+					<td>
+						<div>
+							<?php require_once("category.php")?>
+						</div>
+					</td>
+					<td>AD HOLDER</td>
+				</tr>
+				<tr>
+					<td>AD HOLDER</td>
+					<td>
+						<div id="aboutid" style="margin:auto;">
+							<?php require_once("about.php")?>
+						</div>
+					</td>
+					<td>AD HOLDER</td>
+				</tr>
+			</table>
+				
 			
-			<div id="aboutid" style="margin:auto;">
-				<?php require_once("about.php")?>
-			</div>
-		</div>
-		
-            <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-					<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-					<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+			
+		</div><br><br>
            <div>
 				<?php require_once("contactus.php")?>
 			</div>
