@@ -69,15 +69,45 @@
 					
 					<td>AD HOLDER</td>
 				</tr>
+				
 				<tr>
-					<td>AD HOLDER</td>
+					<td></td>
 					<td>
 						<div>
 							<?php require_once("category.php")?>
 						</div>
 					</td>
-					<td>AD HOLDER</td>
+					<td></td>
 				</tr>
+			   
+			  <tr>
+				<td></td>
+				<td>
+					<div class="container text-center">    
+						<h3>ads!</h3><br>
+						<div class="row">
+							<div class="col-sm-4">
+								<img src="images/1.jpg" class="img-responsive" style="width:100%" alt="Image">
+								<p>Current Project</p>
+							</div>
+							<div class="col-sm-4"> 
+								<img src="images/1.jpg" class="img-responsive" style="width:100%" alt="Image">
+								<p>Project 2</p>    
+							</div>
+							<div class="col-sm-4">
+							<div class="well">
+								<p>Some text..</p>
+						    </div>
+							<div class="well">
+								<p>Some text..</p>
+							</div>
+							</div>
+					    </div>
+                    </div>
+				</td>
+				<td></td>
+			  </tr>
+				
 				<tr>
 					<td>AD HOLDER</td>
 					<td>
@@ -95,5 +125,10 @@
            <div>
 				<?php require_once("contactus.php")?>
 			</div>
+			
+<footer class="container-fluid text-center">
+  <p>Footer Text</p>
+</footer>
+
 	</body>
 </html>
