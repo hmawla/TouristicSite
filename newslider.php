@@ -61,13 +61,3 @@
         </a>
     </div>
 </div>
-
-
-<footer>
-    <div class="container">
-        <div class="col-md-10 col-md-offset-1 text-center">
-            
-            <h6>Coded with <i class="fa fa-heart red" style="color: #BC0213;"></i> by <a href="http://hashif.com" target="_blank">Hashif</a></h6>
-        </div>   
-    </div>
-</footer>
