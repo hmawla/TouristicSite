@@ -1,6 +1,6 @@
 <style>
 .w3-content{
-	max-width:980px;
+	max-width:60%;
 	margin:auto
 }
 .w3-display-container{

@@ -52,7 +52,6 @@ ul.simplefilter {
 	border-radius: 25px; 
 	padding: 0.8em 2em;
 	margin: 0 0.3em;
-	
     background-color: #f9feff;
 }
 .simplefilter li.active,.simplefilter li:hover {
@@ -64,6 +63,13 @@ ul.simplefilter {
 }
 .filtr-item {
     padding: 1em;
+}
+.wthree_services_grids{
+	margin:0 0 0;
+}
+.img-responsive{
+	border-bottom:3px solid #00bbff;
+	border-radius: 10px;
 }
 
 </style>
@@ -127,7 +133,7 @@ ul.simplefilter {
 					<div class="col-md-4 col-sm-4 filtr-item" data-category="3" data-sort="">
 						<div class="agileits_portfolio_grid">
 							<a class="group1" href="images/6.jpg" title="Viticulture">
-								<img src="images/6.jpg" alt="" class="img-responsive" />
+								<img src="images/3.jpg" alt="" class="img-responsive" />
 								<div class="w3_textbox">
 									<h4>Viticulture</h4>
 									<p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit.</p>
@@ -138,7 +144,7 @@ ul.simplefilter {
 					<div class="col-md-4 col-sm-4 filtr-item" data-category="2" data-sort="">
 						<div class="agileits_portfolio_grid">
 							<a class="group1" href="images/7.jpg" title="Viticulture">
-								<img src="images/7.jpg" alt="" class="img-responsive" />
+								<img src="images/1.jpg" alt="" class="img-responsive" />
 								<div class="w3_textbox">
 									<h4>Viticulture</h4>
 									<p>Quis autem vel eum iure reprehenderit qui in ea voluptate velit.</p>

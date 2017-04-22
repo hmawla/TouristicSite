@@ -20,8 +20,8 @@
 	<style>
 		body{
 		background-image: url("images/background.jpg");
-		background-repeat: no-repeat;
-		background-size:100% 80%
+		background-attachment: fixed;
+		background-size:100% 100%
 		}
 	</style>
 	<body >
@@ -61,8 +61,7 @@
 				<tr>
 					<td>AD HOLDER</td>
 					
-					<td><div id="slideshowid" style="padding-top: 20px; padding-bottom:20px;">
-							<br><br>
+					<td><div id="slideshowid" style="">
 							<?php require_once("slideshow.php")?>
 						</div>
 					</td>
@@ -107,6 +106,7 @@
 				</td>
 				<td></td>
 			  </tr>
+			  <br><br><br><br>
 				
 				<tr>
 					<td>AD HOLDER</td>

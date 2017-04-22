@@ -901,6 +901,7 @@
                 '-webkit-perspective': '1000px',
                 '-webkit-transform-style': 'preserve-3d',
                 'position': 'absolute',
+				'border-radius' : '10px',
                 'transition': 'all ' + parent.options.animationDuration + 's ' + parent.options.easing + ' ' + self._calcDelay() + 'ms'
             });
             //Events
