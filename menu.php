@@ -53,7 +53,7 @@
 						<div class="form-group">
 							<input id="searcher" type="text" placeholder="Search" class="form-control">
 						</div>
-						<button type="submit" class="btn btn-success">Search</button>
+						<button type="submit" class="btn btn-success" style="background-color: #00bbff; color:black"><i class="glyphicon glyphicon-search"></i></button>
 					</form>
 			</div>
         </div>
