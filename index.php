@@ -53,21 +53,15 @@
 				getElementById("openabout").visibility = visible;
 			}
 		</script>
+		<br>
 		<div>
 			<div>
 				<?php require_once("menu.php")?>
 			</div>
+			<div id="slideshowid" style="">
+							<?php require_once("newslider.php")?>
+			</div>
 			<table class="container">
-				<tr>
-					<td>AD HOLDER</td>
-					
-					<td><div id="slideshowid" style="">
-							<?php require_once("slideshow.php")?>
-						</div>
-					</td>
-					
-					<td>AD HOLDER</td>
-				</tr>
 				
 				<tr>
 					<td></td>
