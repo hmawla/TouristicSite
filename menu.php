@@ -19,7 +19,7 @@
 					
 					<li class="active" ><a href="#">Home</a></li>
 					<li><a onclick="scrollWin()" href="#scrollWin()">About</a></li>
-					<li><a href="#">Contact</a></li>
+					<li><a href="#contactus">Contact</a></li>
 					<li class="dropdown">
 						<a href="#" class="dropdown-toggle" data-toggle="dropdown">Login<span class="caret"></span></a>
 						<ul id="login-dp" class="dropdown-menu">

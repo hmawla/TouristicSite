@@ -2,7 +2,7 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-		<title>Untitled Document</title>
+		<title>gotour</title>
 		
 		<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
@@ -52,7 +52,7 @@
 				window.scrollBy(0, 2468-height);
 				getElementById("openabout").visibility = visible;
 			}
-		</script>
+		</script> 
 		<br>
 		<div>
 			<div>
@@ -116,12 +116,13 @@
 			
 			
 		</div><br><br>
-           <div>
+           <div id="contactus" >
 				<?php require_once("contactus.php")?>
 			</div>
 			
-<footer class="container-fluid text-center">
-  <p>Footer Text</p>
+<footer class="container-fluid text-center" style="background-color:white">
+  <p>site design / logo © 2017 Stack Exchange Inc; user contributions licensed under cc by-sa 3.0 with attribution required
+rev 2017.4.21.25730</p>
 </footer>
 
 	</body>

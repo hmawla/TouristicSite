@@ -71,6 +71,8 @@ ul.simplefilter {
 	border-bottom:3px solid #00bbff;
 	border-radius: 10px;
 }
+.w3-display-right{position:absolute;right:0%;transform:translate(0%,-50%);-ms-transform:translate(0%,-50%);font-size: 1.5em;}
+
 
 </style>
 <div class="services">
@@ -152,9 +154,11 @@ ul.simplefilter {
 							</a>	
 						</div>
 					</div>
-				   <div class="clearfix"> </div>
+				   <div class="clearfix"></div>
 				</div>
 			</div>
+			<br>
+			<div class="w3-display-right"><a href="#"><b>show more...</b></a></div>
 		</div>
 	</div>
 
