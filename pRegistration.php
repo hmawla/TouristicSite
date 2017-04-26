@@ -1,34 +1,6 @@
 <?php require_once('Connections/conn.php'); ?>
 <?php
 $userexits = "";
-if (!function_exists("GetsqlValueString")) {
-function GetsqlValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "") 
-{
-  if (PHP_VERSION < 6) {
-    $theValue = get_magic_quotes_gpc() ? stripslashes($theValue) : $theValue;
-  }
-
-  switch ($theType) {
-    case "text":
-      $theValue = ($theValue != "") ? "'" . $theValue . "'" : "NULL";
-      break;    
-    case "long":
-    case "int":
-      $theValue = ($theValue != "") ? intval($theValue) : "NULL";
-      break;
-    case "double":
-      $theValue = ($theValue != "") ? doubleval($theValue) : "NULL";
-      break;
-    case "date":
-      $theValue = ($theValue != "") ? "'" . $theValue . "'" : "NULL";
-      break;
-    case "defined":
-      $theValue = ($theValue != "") ? $theDefinedValue : $theNotDefinedValue;
-      break;
-  }
-  return $theValue;
-}
-}
 
 $editFormAction = $_SERVER['PHP_SELF'];
 if (isset($_SERVER['QUERY_STRING'])) {
@@ -36,33 +8,32 @@ if (isset($_SERVER['QUERY_STRING'])) {
 }
 
 if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) {
-	 mysql_select_db($database_conn , $conn);
-	$sql = "select * from person where username = '".$_POST['username']."'" ;
-	$Result1 = mysql_query( $sql , $conn   ) or die(mysql_error());
+	 mysqli_select_db( $conn  , $database_conn );
+	$sqli = "select * from person where username = '".$_POST['username']."'" ;
+	$Result1 = mysqli_query(  $conn  , $sqli    ) or die(mysqli_error($conn));
 
 	
-	if (mysql_num_rows($Result1) == 0)
+	if (mysqli_num_rows($Result1) == 0)
 	{
 	
 	
-  $insertsqli = sprintf("INSERT INTO person (fname, lname, father, email, phone, address, block, pertype, username, password,DOB) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s,%s)",
-                       GetsqlValueString($_POST['fname'], "text"),
-                       GetsqlValueString($_POST['lname'], "text"),
-                       GetsqlValueString($_POST['father'], "text"),
-                       GetsqlValueString($_POST['email'], "text"),
-                       GetsqlValueString($_POST['phone'], "text"),
-                       GetsqlValueString($_POST['address'], "text"),
-                       0,
-                       GetsqlValueString('C', "text"),
-                       GetsqlValueString($_POST['username'], "text"),
-                       GetsqlValueString(md5($_POST['password']), "text"),
-					   GetsqlValueString($_POST['DOB'], "text")
+  $insertsqlii = sprintf("INSERT INTO person (pfname, plname, pfathername, email, phone, address, block, pertype, username, password,DOB) VALUES ('%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s', '%s','%s')",
+                       $_POST['fname'],
+                       $_POST['lname'],
+                       $_POST['father'],
+                       $_POST['email'],
+                       $_POST['phone'],
+                      $_POST['address'],
+                       0 ,
+                       'C',
+                      $_POST['username'],
+                       $_POST['password'],
+					   $_POST['DOB']
 					   );
 
 
-
   
-  				$Result1 = mysql_query( $insertsqli , $conn   ) or die(mysql_error());
+  				$Result1 = mysqli_query(  $conn  , $insertsqlii   ) or die(mysqli_error( $conn ));
 	}
 	  else
 	  {

@@ -2,6 +2,7 @@
 <!doctype html>
 <html>
 	<head>
+	  
 		<meta charset="utf-8">
 		<title>Untitled Document</title>
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
@@ -14,8 +15,11 @@
 	</head>
 	<body style="background-color: #222222;background-image: URL('images/bgg.jpg'); background-position: center;background-repeat: no-repeat;">
 	
+
 <?php require_once('Connections/conn.php'); ?>
 <?php
+
+
 $userexits = "";
 if (!function_exists("GetsqlValueString")) {
 function GetsqlValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "") 
@@ -59,27 +63,8 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) {
 	
 	if (mysqli_num_rows($Result1) == 0)
 	{
-	
-	
- 	
-  $insertsqli = sprintf("INSERT INTO person (fname, lname, father, email, phone, address, block, pertype, username, password,DOB) VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s,%s)",
-                       GetsqlValueString($_POST['fname'], "text"),
-                       GetsqlValueString($_POST['lname'], "text"),
-                       GetsqlValueString($_POST['father'], "text"),
-                       GetsqlValueString($_POST['email'], "text"),
-                       GetsqlValueString($_POST['phone'], "text"),
-                       GetsqlValueString($_POST['address'], "text"),
-                       0,
-                       GetsqlValueString('C', "text"),
-                       GetsqlValueString($_POST['username'], "text"),
-                       GetsqlValueString(md5($_POST['password']), "text"),
-					   GetsqlValueString($_POST['DOB'], "text")
-					   );
-
-
-
-  
-  				$Result1 = mysqli_query( $conn  , $insertsqli    ) or die(mysqli_error($conn));
+			
+  			mysql_query("INSERT INTO PERSON (pfname,plname,pfathername,email,address,dob,username,password,phone) values($fn,$ln,$pfn,$email,$add,$dob,$phone,$gender,$uname,$pass)");
 				//payment
 				//get last id for registeration 
 				//insert on table registeration 
@@ -90,13 +75,12 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) {
 	}
 	  else
 	  {
-		  $userexits = "User Already exists";
+		 $userexits = "User Already exists";
 	  }
   
 }
 
 ?>
-
 <!DOCTYPE html>
 <!-- ------------------------------------------------------------------- -->
 <div >
@@ -124,18 +108,18 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) {
 						<ul id="login-dp" class="dropdown-menu">
 							<li>
 								<div class="row" style="padding:4px;">
-										<form class="form" role="form" method="post" action="login" accept-charset="UTF-8" id="login-nav">
+										<form class="form" role="form" method="post"  accept-charset="UTF-8" id="login-nav">
 											<div class="form-group">
-												<label class="sr-only" for="exampleInputEmail2">Email address</label>
-												<input type="email" class="form-control" id="exampleInputEmail2" placeholder="Email address" required>
+												<label class="sr-only" for="username">username</label>
+												<input type="text" class="form-control" id="username" placeholder="Username" required>
 											</div>
 											<div class="form-group">
-												<label class="sr-only" for="exampleInputPassword2">Password</label>
-												<input type="password" class="form-control" id="exampleInputPassword2" placeholder="Password" required>
+												<label class="sr-only" for="passsword">Password</label>
+												<input type="password" class="form-control" id="password" placeholder="Password" required>
 												<div class="help-block text-right"><a href="">Forget the password ?</a></div>
 											</div>
 											<div class="form-group">
-												<button type="submit" class="btn btn-primary btn-block">Sign in</button>
+												<button type="submit" class="btn btn-primary btn-block" name="login" id="login">Sign in</button>
 											</div>
 											
 										</form>
@@ -164,27 +148,27 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) {
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="fn">First name</label>  
+  <label class="col-md-4 control-label" for="pfname">First name</label>  
   <div class="col-md-4">
-  <input id="fn" name="fn" type="text" placeholder="first name" class="form-control input-md" required="">
+  <input id="pfname" name="pfname" type="text" placeholder="first name" class="form-control input-md" required="">
     
   </div>
 </div>
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="ln">Last name</label>  
+  <label class="col-md-4 control-label" for="plname">Last name</label>  
   <div class="col-md-4">
-  <input id="ln" name="ln" type="text" placeholder="last name" class="form-control input-md" required="">
+  <input id="plname" name="plname" type="text" placeholder="last name" class="form-control input-md" required="">
     
   </div>
 </div>
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="cmpny">father</label>  
+  <label class="col-md-4 control-label" for="pfathername">father</label>  
   <div class="col-md-4">
-  <input id="father" name="father" type="text" placeholder="father-name" class="form-control input-md" required="">
+  <input id="pfathername" name="pfathername" type="text" placeholder="father-name" class="form-control input-md" required="">
     
   </div>
 </div>
@@ -200,10 +184,10 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) {
 
 <!-- Text area-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="add">Address</label>  
+  <label class="col-md-4 control-label" for="address">Address</label>  
   <div class="col-md-4">
  <!-- <input id="add" name="add" type="textarea" placeholder="ex:country,city,town" class="form-control" required="">-->
-    <textarea class="form-control" placeholder="ex:country,city,town" id="add" required=""></textarea>
+    <textarea class="form-control" placeholder="ex:country,city,town" id="address" required=""></textarea>
   </div>
 </div>
 
@@ -234,12 +218,10 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) {
   <label class="col-md-4 control-label" for="gender">Gender</label>
   <div class="col-md-4"> 
     <label class="radio-inline" for="Training-0">
-      <input type="radio" name="M" id="M" value="m" checked="checked">
-      Male
+      <input type="radio" name="M" id="M" value="m" checked="checked">Male</input>
     </label> 
     <label class="radio-inline" for="f">
-      <input type="radio" name="f" id="f" value="f">
-      Female
+      <input type="radio" name="f" id="f" value="f">Female</input>
     </label>
   </div>
 </div>
@@ -247,18 +229,18 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) {
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="phone">user-name</label>  
+  <label class="col-md-4 control-label" for="username">user-name</label>  
   <div class="col-md-4">
-  <input id="uname" name="uname" type="text" placeholder="user-name" class="form-control input-md" required="" min="5">
+  <input id="username" name="username" type="text" placeholder="user-name" class="form-control input-md" required="" min="5">
     
   </div>
 </div>
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="phone">Password</label>  
+  <label class="col-md-4 control-label" for="password">Password</label>  
   <div class="col-md-4">
-  <input id="pass" name="pass" type="password" placeholder="more than 6 characters" class="form-control input-md" required="" min="6">
+  <input id="password" name="password" type="password" placeholder="more than 6 characters" class="form-control input-md" required="" min="6">
     
   </div>
 </div>
@@ -266,7 +248,7 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) {
 <div class="form-group">
   <label class="col-md-4 control-label" for="submit"></label>
   <div class="col-md-4">
-    <button id="submit" name="submit" class="btn btn-primary">SUBMIT</button>
+    <button  onclick="<?php  mysqli_query($conn,"INSERT INTO PERSON (pfname,plname,pfathername,email,address,dob,username,password,phone) values('hassan','ali','klay','123@as.com','asd','11-11-1111','1234567','m','ali11','123123123')"); ?>"  class="btn btn-primary">save</button>
   </div>
 </div>
 

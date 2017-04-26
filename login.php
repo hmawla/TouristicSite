@@ -1,3 +1,8 @@
+  <script type="text/javascript">
+        function farid(){
+            alert("invalid username or password");
+        }
+    </script>
 <?php require_once('Connections/conn.php'); ?>
 <?php
 
@@ -14,7 +19,7 @@ function GetsqlValueString($theValue, $theType, $theDefinedValue = "", $theNotDe
   switch ($theType) {
     case "text":
       $theValue = ($theValue != "") ? "'" . $theValue . "'" : "NULL";
-      break;    
+      break;
     case "long":
     case "int":
       $theValue = ($theValue != "") ? intval($theValue) : "NULL";
@@ -64,11 +69,10 @@ $totalRows_rsLogin = mysqli_num_rows($rsLogin);
 	if ($totalRows_rsLogin > 0 )
 	{
 		
-		$_SESSION['userid'] = $row_rsLogin['ID'];
+		$_SESSION['userid'] = $row_rsLogin['id'];
 		$_SESSION['Username'] = $row_rsLogin['username'];
 
-		
-		
+	
 		if($row_rsLogin['pertype'] == 'A')
 		{
 					header('Location:adminpage.php');
@@ -82,7 +86,7 @@ $totalRows_rsLogin = mysqli_num_rows($rsLogin);
 	}
 	else
 	{
-		$error = "Invalid username or password";
+		echo '<script>farid();</script>';
 	}
 }
 ?>

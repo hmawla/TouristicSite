@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<info>
+	<infoitem key="UD_rsday" value="name:id;datatype:int,name:description;datatype:string" />
+	<infoitem key="UD_rstime" value="name:id;datatype:int,name:description;datatype:string" />
+</info>
