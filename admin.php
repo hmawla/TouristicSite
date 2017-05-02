@@ -1,4 +1,9 @@
-		<link rel="stylesheet" type="text/css" href="css/style.css" />
+	
+    <?php session_start(); ?>
+    
+    
+    
+    	<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
 		<link rel="stylesheet" type="text/css" href="css/colorbox.css" />
@@ -141,7 +146,7 @@
         <div class="useravatar">
             <img alt="" src="images/logo1.png">
         </div>
-        <div class="card-info"> <span class="card-title">username</span>
+        <div class="card-info"> <span class="card-title"><?php echo  $_SESSION['Username'] ; ?></span>
 
         </div>
     </div>
@@ -171,10 +176,12 @@
     <div class="well">
       <div class="tab-content">
         <div class="tab-pane fade in active" id="tab1">
-          <h3>This is tab 1</h3>
+          <h3>This is tab 1
+		  </h3>
+		  
         </div>
         <div class="tab-pane fade in" id="tab2">
-          <h3>This is tab 2</h3>
+          <h3><?php require_once("blockunblock.php")?></h3>
         </div>
         <div class="tab-pane fade in" id="tab3">
           <h3>This is tab 3</h3>

@@ -1,4 +1,7 @@
-		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<?php session_start(); ?> 
+        
+        
+        <link rel="stylesheet" type="text/css" href="css/style.css" />
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
 		<link rel="stylesheet" type="text/css" href="css/colorbox.css" />
@@ -141,7 +144,7 @@
         <div class="useravatar">
             <img alt="" src="images/4.jpg">
         </div>
-        <div class="card-info"> <span class="card-title">username</span>
+        <div class="card-info"> <span class="card-title"><?php echo  $_SESSION['Username'] ; ?></span>
 
         </div>
     </div>

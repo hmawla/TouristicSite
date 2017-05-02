@@ -1,5 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<info>
-	<infoitem key="UD_rsType" value="name:id;datatype:int,name:membertype;datatype:string" />
-	<infoitem key="UD_rsbranch" value="name:id;datatype:int,name:branchname;datatype:string" />
-</info>
