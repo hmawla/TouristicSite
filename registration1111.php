@@ -1,50 +1,4 @@
-<?php require_once('Connections/conn.php'); ?>
-<?php
-$userexits = "";
-
-$editFormAction = $_SERVER['PHP_SELF'];
-if (isset($_SERVER['QUERY_STRING'])) {
-  $editFormAction .= "?" . htmlentities($_SERVER['QUERY_STRING']);
-}
-
-if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) {
-	 mysqli_select_db( $conn  , $database_conn );
-	$sqli = "select * from person where username = '".$_POST['username']."'" ;
-	$Result1 = mysqli_query(  $conn  , $sqli    ) or die(mysqli_error($conn));
-	
-
-	
-	if (mysqli_num_rows($Result1) == 0)
-	{
-	
-	
-  $insertsqlii = sprintf("INSERT INTO person (pfname, plname, pfathername, email, phone, address, block, pertype, username, password, DOB, gender) VALUES ('%s', '%s', '%s', '%s', '%s','%s', '%s', '%s', '%s', '%s', '%s','%s')",
-                       $_POST['fname'],
-                       $_POST['lname'],
-                       $_POST['father'],
-                       $_POST['email'],
-                       $_POST['phone'],
-                       $_POST['address'],
-                       0 ,
-                       'C',
-                       $_POST['username'],
-                       $_POST['password'],
-					   $_POST['DOB'],
-					    $_POST['gender']
-					   );
-
-  
-  				$Result1 = mysqli_query(  $conn  , $insertsqlii   ) or die(mysqli_error( $conn ));
-	}
-	  else
-	  {
-		  $userexits = "User Already exists";
-	  }
-  
-}
-
-?>
-
+<?php session_start(); ?>
 <!doctype html>
 <html>
 	<head>
@@ -107,7 +61,6 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) {
 											</div>
 											
 										</form>
-									</div>
 									<div class="bottom text-center">
 										New Here? <a href="#"><b>Join Us</b></a>
 									</div>
@@ -124,17 +77,15 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) {
 <!-- ------------------------------------------------------------------- -->
 <br><br><br>
 <p style="text-align:center;font-size: 40px;;font-family:FontAwesome;color:grey;" class="field">Signup For Advertisement <p>
-<form class="form-horizontal" action="<?php echo $editFormAction; ?>" method="POST"  name="form1" acceptcharset="UTF-8">
+<form class="form-horizontal" action="adduser.php" method="POST"  name="form1" acceptcharset="UTF-8">
 
 <fieldset >
 
 <!-- Form Name -->
-
-<!-- Text input-->
-<div class="form-group">
+    <div class="form-group">
   <label class="col-md-4 control-label" for="fname">First name</label>  
   <div class="col-md-4">
-  <input id="fname" name="fname" type="text" placeholder="first name" class="form-control input-md" required="">
+  <input id="fname" name="fname" type="text" placeholder="First Name" class="form-control input-md"  required="">
     
   </div>
 </div>
@@ -214,7 +165,7 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) {
   <label class="col-md-4 control-label" for="phone">user-name</label>  
   <div class="col-md-4">
   <input id="username" name="username" type="text" placeholder="user-name" class="form-control input-md" required="" min="5">
-   <div class="col-md-4"><font color="red"><?php echo   $userexits; ?></font> 
+   <div class="col-md-4"><font color="red"></font> 
   </div>
 </div>
 </div>
@@ -233,6 +184,8 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) {
     <button class="btn btn-primary" type="submit" name="Save" id="Save" value="Save">SUBMIT</button>
   </div>
 </div>
+<!-- Text input-->
+
 
 </fieldset>
 <input type="hidden" name="MM_insert" value="form1">
