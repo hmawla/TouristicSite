@@ -19,7 +19,7 @@ $confirmnewpassword = ($_POST['confirmnewpassword']);
 $echoer = $echoer . "confirmnewpassword = " . $confirmnewpassword . " ";
 
 $b = ($password);
-$sql = mysqli_query($conn, "SELECT password from person  WHERE username="$username"") ;
+$sql = mysqli_query($conn, "SELECT password from person  WHERE username='$username'") ;
 $echoer = $echoer . "Sql = " . $sql . " ";
 
 if ($sql != $password){
