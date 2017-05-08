@@ -1,29 +1,44 @@
-<?php require_once('Connections/conn.php'); ?>
+
 <?php
-$echoer = " ";
-if(!$conn){
-	die("connection failed");
-}
-							
+$servername = "localhost";
+$username = "root";
+$password = "";
+$dbname = "tourist";
+$conn = mysqli_connect($servername, $username, $password, $dbname);
+
+$echoer = " ";						
 
 $username = ($_POST['username']);
-$echoer = $echoer . "username = " . $username . " ";
+$echoer = $echoer . "username = " . $username . " " . "<br>";
 
 $password = ($_POST['password']);
-$echoer = $echoer . "password = " . $password . " ";
+$echoer = $echoer . "password = " . $password . " " . "<br>";
 
 $newpassword = $_POST['newpassword'];
-$echoer = $echoer . "newpassword = " . $newpassword . " ";
+$echoer = $echoer . "newpassword = " . $newpassword . " " . "<br>" ;
 
 $confirmnewpassword = ($_POST['confirmnewpassword']);
-$echoer = $echoer . "confirmnewpassword = " . $confirmnewpassword . " ";
+$echoer = $echoer . "confirmnewpassword = " . $confirmnewpassword . " " . "<br>";
 
 $b = ($password);
-$sql = mysqli_query($conn, "SELECT password from person  WHERE username='$username'") ;
-$echoer = $echoer . "Sql = " . $sql . " ";
+//$sql = "SELECT password from person WHERE username=" . $username;
+//$result=mysqli_query($conn,$sql);
+//$row = mysqli_fetch_assoc($result);
+$sql = "SELECT id, username, password FROM person WHERE username = '" . $username . "'";
+$result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 
-if ($sql != $password){
-	echo $echoer . "Your passwords do not match.";
+if (mysqli_num_rows($result) > 0) {
+    // output data of each row
+    while($row = mysqli_fetch_assoc($result)) {
+        echo "id: " . $row["id"]. " - Name: " . $row["username"]. " " . $row["password"]. "<br>";
+    }
+} else {
+    echo "0 results <br>";
+}
+
+
+if ($result != $password){
+	echo $echoer . "Your passwords do not match." . "<br>";
 }
 
 if($newpassword != $confirmnewpassword)

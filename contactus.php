@@ -1,11 +1,11 @@
 <!doctype html>
 
 	
-	<section  id="contact" style="background-color: #222222;background-image: URL('images/intback.jpg'); background-position: center;background-repeat: no-repeat; ">
-            <div class="container">
+
+            <div class="container" style="background-color: #222222;background-image: URL('images/intback.jpg'); background-repeat: no-repeat;background-size: cover; ">
                 <div class="row" >
                     <div style="margin-bottom: 20px;text-align:center;">
-                        <h1 style="color:#fff;">Write Your Message</h1>
+                        <h1 style="color:#fff;" >Write Your Message</h1>
                         <div class="titleline-icon"></div>
                         <p style="color:#fff;">keep in contact with us</p>
                     </div>
@@ -56,5 +56,5 @@
                     </div>
                 </div>
             </div>
-        </section>
+
 		

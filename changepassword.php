@@ -1,20 +1,4 @@
 <?php session_start(); ?>
-        <?php
-		
-								$servername="localhost";
-								$username="root";
-								$password="";
-								$database="tourist";
-								$conn=mysqli_connect($servername,$username,$password,$database);
-								if(!$conn)
-								die("connection failed");
-								$query="select * from person where username='$username' ;";
-								$results=mysqli_query($conn,$query);
-								
-								
-                                $rows=mysqli_fetch_array($results);
-		
-		   ?>
 
 <!doctype html>
 <html>
