@@ -1,5 +1,11 @@
 	
-    <?php session_start(); ?>
+    <?php session_start(); 
+	$id = $_SESSION['valid'];
+	if( $id != 'ok')
+	{
+		header('location:index.php');
+	}
+	?>
     
     
     
@@ -129,7 +135,7 @@
 					<li ><a href="index.php" >Home</a></li>
 				</ul>
 				<ul class="nav navbar-nav changecolor1 w3-display-right">
-					<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> logout</a></li>
+					<li><a href="logout.php"><span class="glyphicon glyphicon-log-in"></span> logout</a></li>
 				</ul>
 			</div>
         </div>

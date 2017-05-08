@@ -1,7 +1,12 @@
-		<?php session_start(); ?> 
-        
-        
-        <link rel="stylesheet" type="text/css" href="css/style.css" />
+	
+    <?php session_start();
+	$id = $_SESSION['si'];
+	if( $id != 'ok')
+	{
+		header('location:index.php');
+	}
+	?>
+	<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
 		<link rel="stylesheet" type="text/css" href="css/colorbox.css" />
@@ -125,9 +130,10 @@
 			<div>
 				<ul class="nav navbar-nav changecolor1">
 					<li ><a href="index.php" >Home</a></li>
+					<li ><a href="changepassword.php" >change password</a></li>
 				</ul>
 				<ul class="nav navbar-nav changecolor1 w3-display-right">
-					<li><a href="#"><span class="glyphicon glyphicon-log-in"></span> logout</a></li>
+					<li><a href="logout.php"><span class="glyphicon glyphicon-log-in"></span> logout</a></li>
 				</ul>
 			</div>
         </div>

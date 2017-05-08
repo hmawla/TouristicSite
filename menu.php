@@ -79,10 +79,15 @@ $totalRows_rsLogin = mysqli_num_rows($rsLogin);
 		
 		if($row_rsLogin['pertype'] == 'A')
 		{
+			 $_SESSION['valid'] = "ok";
+			
 					header('Location:admin.php');
 		}
 		elseif ($row_rsLogin['pertype'] == 'C')
 		{
+			$_SESSION['user'] =$colname_rsLogin;
+				$_SESSION['pass'] =$colpassword_rsLogin;
+				$_SESSION['si'] ="ok";
 				header('Location:user.php');	
 		}
 	
@@ -132,7 +137,7 @@ $totalRows_rsLogin = mysqli_num_rows($rsLogin);
 											<div class="form-group">
 												<label class="sr-only" for="passsword">Password</label>
 												<input type="password" class="form-control" name="password" id="password" placeholder="Password" required>
-												<div class="help-block text-right"><a href="">Forget the password ?</a></div>
+												<div class="help-block text-right"><a href="forgetpassword.php"target="_blank" >Forget the password ?</a></div>
 											</div>
 											<div class="form-group">
 												<button type="submit" class="btn btn-primary btn-block" name="login" id="login">Sign in</button>
