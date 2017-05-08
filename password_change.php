@@ -29,24 +29,23 @@ $result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 
 if (mysqli_num_rows($result) > 0) {
     // output data of each row
-    while($row = mysqli_fetch_assoc($result)) {
+    $row = mysqli_fetch_assoc($result);
+
         echo "id: " . $row["id"]. " - Name: " . $row["username"]. " " . $row["password"]. "<br>";
-    }
+
 } else {
     echo "0 results <br>";
 }
 
 
-if ($result != $password){
+if ($password != $row["password"]){
 	echo $echoer . "Your passwords do not match." . "<br>";
-}
-
-if($newpassword != $confirmnewpassword)
+}else if($newpassword != $confirmnewpassword)
 {                                                                
 	echo "new passwords do not match";
 }
 else {
-	mysqli_query($conn,"UPDATE person SET password='$newpassword' WHERE username='$username'");
+	mysqli_query($conn,"UPDATE person SET password='" . $newpassword . "' WHERE username='" . $username . "'");
 }
 
    // echo "You have successfully changed your password.";
