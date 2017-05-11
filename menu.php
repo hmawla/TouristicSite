@@ -1,18 +1,14 @@
 <!DOCTYPE html>
+
 <!-- ------------------------------------------------------------------- -->
-<?php require_once('Connections/conn.php'); ?>
   <script type="text/javascript">
         function farid(){
             alert("invalid username or password");
         }
     </script>
 
-
+<?php require_once('Connections/conn.php'); ?>
 <?php
-
-$error = "" ; 
-
-session_start();
 if (!function_exists("GetsqlValueString")) {
 function GetsqlValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "") 
 {
@@ -55,8 +51,7 @@ if (isset($_POST['password'])) {
   $colpassword_rsLogin = $_POST['password'];
 }
 
-//mysqli_select_db($conn , $database_conn);
-mysqli_select_db( $conn  , $dbname );
+mysqli_select_db( $conn  , $dbname);
 
 
 //$colpassword_rsLogin = md5($colpassword_rsLogin);
@@ -73,7 +68,7 @@ $totalRows_rsLogin = mysqli_num_rows($rsLogin);
 	if ($totalRows_rsLogin > 0 )
 	{
 		
-		$_SESSION['userid'] = $row_rsLogin['ID'];
+		$_SESSION['userid'] = $row_rsLogin['id'];
 		$_SESSION['Username'] = $row_rsLogin['username'];
 
 		
@@ -106,7 +101,7 @@ $totalRows_rsLogin = mysqli_num_rows($rsLogin);
 
 
 
-<nav class="navbar navbar-default navbar-fixed-top changecolor ">
+<nav class="navbar navbar-default  changecolor ">
     <div class="container">
         <div class="navbar-header">
 			<image src="images/logo1.png" class="changesize" href="#" />

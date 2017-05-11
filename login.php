@@ -1,4 +1,5 @@
-  <script type="text/javascript">
+ <?php session_start(); ?>
+        <script type="text/javascript">
         function farid(){
             alert("invalid username or password");
         }
