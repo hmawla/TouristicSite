@@ -49,7 +49,7 @@
   <input id="password" name="password" type="text" placeholder="last name" class="form-control input-md" required="">
     
   </div>
-</div
+    </div>
 <!-- Text input-->
 <div class="form-group">
   <label class="col-md-4 control-label" for="newpassword">Enter New Password:</label>  

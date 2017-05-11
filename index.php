@@ -1,3 +1,4 @@
+<?php session_start(); ?>
 <!doctype html>
 <html>
 	<head>
@@ -96,7 +97,7 @@
 		<br>
 		<div>
 			<div>
-				<?php require_once("menu.php")?>
+				<?php require_once("menu.php")?> 
 			</div>
 			<div class="f_backtotop">
 			    <span>
