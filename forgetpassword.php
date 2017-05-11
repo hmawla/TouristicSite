@@ -16,7 +16,7 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) {
 
 	
 	$eun = $_SESSION['username'];
-	$smp = $_SESSION['ee'];
+	//$smp = $_SESSION['ee'];
 	
   $insertsqliii = sprintf("select password from person where username = '$eun'"
 					   );

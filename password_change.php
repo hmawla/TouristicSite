@@ -31,12 +31,9 @@ if (mysqli_num_rows($result) > 0) {
     // output data of each row
     $row = mysqli_fetch_assoc($result);
 
-        echo "id: " . $row["id"]. " - Name: " . $row["username"]. " " . $row["password"]. "<br>";
+      
 
-} else {
-    echo "0 results <br>";
-}
-
+} 
 
 if ($password != $row["password"]){
 	echo $echoer . "Your passwords do not match." . "<br>";
@@ -51,6 +48,6 @@ else {
    // echo "You have successfully changed your password.";
    
    mysqli_close($conn);
-
+header('location:changepassword.php');
    
 ?>

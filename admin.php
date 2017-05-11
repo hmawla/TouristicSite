@@ -1,5 +1,7 @@
-	
+<?php require_once('Connections/conn.php'); ?>	
     <?php session_start(); 
+	
+
 	$id = $_SESSION['valid'];
 	if( $id != 2)
 	{
@@ -182,9 +184,169 @@
     <div class="well">
       <div class="tab-content">
         <div class="tab-pane fade in active" id="tab1">
-          <h3>This is tab 1
-		  </h3>
+          
+	<!--      admin user control          -->	  
 		  
+
+
+
+
+<center>
+<p>
+<form method="POST" action="#">
+<input type="text" name="u_s" placeholder="Search Of User Name" size="50" id="s_u"/>
+<input type="submit" value="Search"/>
+</form>
+<?php
+if(isset($_POST['username']))
+// Search with USER
+ if (!$conn) {
+ die("Connection failed: " . mysqli_connect_error());
+}
+if(isset($_POST['username'])){
+{
+$search = $_POST['username'];
+if($search !=""){
+$sql = "SELECT * FROM person where username = '$search'";
+$result = mysqli_query($conn, $sql);
+
+if (@mysqli_num_rows($result) <= 0){
+echo "<br/><b>No Record</b>";
+}
+
+if (@mysqli_num_rows($result) > 0){
+?>
+  <p>
+<table border="1" cellpadding="0" width="50%">
+<tr>
+ <th width="35%">User Full Name</th>
+ <th width="35%">User Name</th>
+
+ <th width="15%">User Type</th>
+ <th width="15%">Block</th>
+ <th width="15%">unBlock</th>
+</tr>       
+<?php 
+ while($rows=mysqli_fetch_assoc($result)) {
+?>	 
+<tr>
+  <td><?php echo $rows['pfname'].' '.$rows['pfathername'].' '.$rows['plname']; ?></td>
+  <td><?php echo $rows['username'];?></td>
+  <td><?php echo $rows['email'];?></td>
+  <td><?php $r =$rows['pertype'];
+  switch  ($r){
+		case "A":
+        echo "admin";
+        break;
+		case "C":
+        echo "Student";
+		default:
+        break;
+  }
+  ?>
+  </td>
+  <td align="center">
+  	 <form method="POST" action="user_manage_process.php">
+  	 <button name="b" value="<?php echo $rows["id"]; ?>"><img src="/images/skype.png" height="20" width="15"/></button>
+     </form>
+     </td>
+     <td align="center">
+     <form method="POST" action="user_manage_process.php">
+  	 <button name="ub" value="<?php echo $rows["id"]; ?>"><img src="/images/skype.png" height="20" width="15"/></button>
+     </form>
+     </td>
+</tr>
+<?php   
+ }}}else echo"";}
+ }
+?>
+</table>
+<?php
+// Check connection
+  if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+$sql = "SELECT * from person";
+
+$result = @mysqli_query($conn, $sql);
+if (@mysqli_num_rows($result) < 0) 
+// output data of each row
+	echo "No records";
+else { 
+ 
+if (@mysqli_num_rows($results) <= 0)
+{
+?>
+</table>
+<!--Users Table-->
+<?php
+//Table to display users table
+?>
+<p>
+<table border="1" cellpadding="0" width="50%">
+<tr>
+ <th width="35%">User Full Name</th>
+ <th width="35%">User Name</th>
+ 
+ <th width="15%">User Type</th>
+ <th width="15%">Block</th>
+ <th width="15%">unBlock</th>
+</tr>       
+<?php
+while($rows = mysqli_fetch_assoc($result)) {
+?>
+<tr>
+  <td><?php echo $rows['pfname'].' '.$rows['pfathername'].' '.$rows['plname']; ?></td>
+  <td><?php echo $rows['username'];?></td>
+
+  <td><?php $r =$rows['pertype'];
+  switch  ($r){
+		case "A":
+        echo "admin";
+        break;
+		case "c":
+        echo "user";
+			default:
+  }
+  ?>
+  </td>  
+  <td align="center">
+     <form name="frm_block" id="frm_block" method="POST" action="user_manage_process.php">
+  	 <button name="b" value="<?php echo $rows["u_ID"]; ?>">
+     		<img src="/images/skype.png" height="25" width="20" /></button>
+     </form>
+  </td>
+  <td>
+     <form method="POST" action="user_manage_process.php">
+  	 <button name="ub" value="<?php echo $rows["u_ID"]; ?>">
+     		<img src="/images/skype.png" height="25" width="20"/></button>
+     </form>
+  </td>
+</tr>
+<?php }}} 
+@mysqli_close($conn);
+?>
+</table>
+<?php
+if(isset($_SESSION['block']))
+{
+	echo $_SESSION['block'];
+		 $_SESSION['block'] = "";
+}
+if(isset($_SESSION['unblock']))
+{
+	echo $_SESSION['unblock'];
+		 $_SESSION['unblock'] = "";
+}
+?>
+</body>
+</html>	  
+		  
+		  
+		  
+		  
+		  
+			  
         </div>
         <div class="tab-pane fade in" id="tab2">
           <h3><?php require_once("blockunblock.php")?></h3>
