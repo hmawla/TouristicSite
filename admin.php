@@ -1,7 +1,7 @@
 	
     <?php session_start(); 
 	$id = $_SESSION['valid'];
-	if( $id != 'ok')
+	if( $id != 2)
 	{
 		header('location:index.php');
 	}

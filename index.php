@@ -163,11 +163,7 @@
 					</td>
 					<td>AD HOLDER</td>
 				</tr>
-			</table>
-				
-			
-			
-		</div><br><br>
+			</table><br><br>
            <div id="contactus" >
 				<?php require_once("contactus.php")?>
 			</div>
