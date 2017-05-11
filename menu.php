@@ -7,7 +7,8 @@
         }
     </script>
 
-<?php require_once('Connections/conn.php'); ?>
+<?php require_once('Connections/conn.php');
+
 <?php
 if (!function_exists("GetsqlValueString")) {
 function GetsqlValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "") 
@@ -48,7 +49,7 @@ if (isset($_POST['username'])) {
 
 $colpassword_rsLogin = "-1";
 if (isset($_POST['password'])) {
-  $colpassword_rsLogin = $_POST['password'];
+  $colpassword_rsLogin  = $_POST['password'];
 }
 
 mysqli_select_db( $conn  , $dbname);
@@ -76,8 +77,7 @@ $totalRows_rsLogin = mysqli_num_rows($rsLogin);
 		if($row_rsLogin['pertype'] == 'A')
 		{
 			 $_SESSION['valid'] = "ok";
-			
-					header('Location:admin.php');
+			header('Location:admin.php');
 		}
 		elseif ($row_rsLogin['pertype'] == 'C')
 		{
