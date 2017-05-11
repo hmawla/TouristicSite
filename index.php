@@ -57,13 +57,63 @@
             z-index:3;width:100%;
             height:0;box-sizing:border-box
         }
-        .f_backtotop span{position:relative;max-width:1920px;margin:0 auto;display:block}
-        .f_backtotop a{position:absolute;right:30px;bottom:6px;width:48px;height:48px;font-family:'sssM';font-size:14px;-text-align:center;text-transform:uppercase;text-indent:-999em;line-height:35px;background:url('images/1.jpg');background-size:100% 100%;overflow:hidden;transform:rotate(180deg) translateZ(1px);-webkit-transform:rotate(180deg) translateZ(1px);-moz-transform:rotate(180deg) translateZ(1px);-o-transform:rotate(180deg) translateZ(1px);-ms-transform:rotate(180deg);transition:all .45s cubic-bezier(0.175,0.885,0.320,1.275);-webkit-transition:all .45s cubic-bezier(0.175,0.885,0.320,1);-webkit-transition:all .45s cubic-bezier(0.175,0.885,0.320,1.275);-moz-transition:all .45s cubic-bezier(0.175,0.885,0.320,1.275);-o-transition:all .45s cubic-bezier(0.175,0.885,0.320,1.275)}
-        .ie8 .f_backtotop a{display:none !important}
-        .ie10 .f_backtotop a{transition:none}
-        .f_backtotop a.hide,.ie8 .f_backtotop a,.ie8 .f_backtotop a.rotate.hide{opacity:0}
-        .f_backtotop a.rotate{transform:rotate(360deg) translateZ(1px);-webkit-transform:rotate(360deg) translateZ(1px);-moz-transform:rotate(360deg) translateZ(1px);-o-transform:rotate(360deg) translateZ(1px);-ms-transform:rotate(360deg)}
-        .s2 .f_backtotop a{bottom:2px}.s1 .f_backtotop a{right:13px;bottom:10px;width:36px;height:36px}
+        .f_backtotop span{
+            position:relative;
+            max-width:1920px;
+            margin:0 auto;
+            display:block
+        }
+        .f_backtotop a{
+            position:absolute;
+            right:30px;
+            bottom:6px;
+            width:48px;
+            height:48px;
+            font-family:'sssM';
+            font-size:14px;
+            -text-align:center;
+            text-transform:uppercase;
+            text-indent:-999em;
+            line-height:35px;
+            background:url('images/56690.png');
+            background-size:100% 100%;
+            overflow:hidden;
+            transform:rotate(180deg) translateZ(1px);
+            -webkit-transform:rotate(180deg) translateZ(1px);
+            -moz-transform:rotate(180deg) translateZ(1px);
+            -o-transform:rotate(180deg) translateZ(1px);
+            -ms-transform:rotate(180deg);
+            transition:all .45s cubic-bezier(0.175,0.885,0.320,1.275);
+            -webkit-transition:all .45s cubic-bezier(0.175,0.885,0.320,1);
+            -webkit-transition:all .45s cubic-bezier(0.175,0.885,0.320,1.275);
+            -moz-transition:all .45s cubic-bezier(0.175,0.885,0.320,1.275);
+            -o-transition:all .45s cubic-bezier(0.175,0.885,0.320,1.275)
+        }
+        .ie8 .f_backtotop a{
+            display:none !important
+        }
+        .ie10 .f_backtotop a{
+            transition:none
+        }
+        .f_backtotop a.hide,.ie8 .f_backtotop a,.ie8 .f_backtotop a.rotate.hide{
+            opacity:0
+        }
+        .f_backtotop a.rotate{
+            transform:rotate(360deg) translateZ(1px);
+            -webkit-transform:rotate(360deg) translateZ(1px);
+            -moz-transform:rotate(360deg) translateZ(1px);
+            -o-transform:rotate(360deg) translateZ(1px);
+            -ms-transform:rotate(360deg)
+        }
+        .s2 .f_backtotop a{
+            bottom:2px
+        }
+        .s1 .f_backtotop a{
+            right:13px;
+            bottom:10px;
+            width:36px;
+            height:36px
+        }
 	</style>
 	<body >
 		<script>
@@ -101,7 +151,7 @@
 			</div>
 			<div class="f_backtotop">
 			    <span>
-			        <a href="http://www.samsung.com/sg/smartphones/galaxy-s8/security/#contents" tabindex="-1" data-omni=":backtotop" data-omni-type="microsite" class="">
+			        <a href="#" tabindex="-1" data-omni=":backtotop" data-omni-type="microsite" class="">
 			         <span>
 			             Back to
 			         </span> 
