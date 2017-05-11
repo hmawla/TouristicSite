@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <!-- ------------------------------------------------------------------- -->
+<?php require_once('Connections/conn.php'); ?>
   <script type="text/javascript">
         function farid(){
             alert("invalid username or password");
         }
     </script>
 
-<?php require_once('Connections/conn.php'); ?>
+
 <?php
 
 $error = "" ; 
@@ -55,7 +56,7 @@ if (isset($_POST['password'])) {
 }
 
 //mysqli_select_db($conn , $database_conn);
-mysqli_select_db( $conn  , $database_conn );
+mysqli_select_db( $conn  , $dbname );
 
 
 //$colpassword_rsLogin = md5($colpassword_rsLogin);

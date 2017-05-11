@@ -37,7 +37,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="username">Enter username:</label>  
   <div class="col-md-4">
-  <input id="username" name="username" type="text" placeholder="first name" class="form-control input-md" required="">
+  <input id="username" name="username" type="text" placeholder="first name" class="form-control input-md" >
     
   </div>
 </div>
