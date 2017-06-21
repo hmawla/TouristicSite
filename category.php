@@ -80,12 +80,12 @@ ul.simplefilter {
 			<div class="wthree_services_grids">	
 				<ul class="simplefilter">
 					<li class="active" data-filter="all">All</li>
-					<li data-filter="1">Category 1</li>
-					<li data-filter="2">Category 2</li>
-					<li data-filter="3">Category 3</li>
-					<li data-filter="3">Category 4</li>
-					<li data-filter="3">Category 5</li>
-					<li data-filter="3">Category 6</li>
+					<li data-filter="1">Castles</li>
+					<li data-filter="2">Musems</li>
+					<li data-filter="3">relegious Places</li>
+					<li data-filter="3">Caverns</li>
+					<li data-filter="3">Natural features</li>
+					<li data-filter="3">Others</li>
 				</ul>
 				<div class="filtr-container">
 					<div class="col-md-4 col-sm-4 filtr-item" data-category="1" data-sort="">
@@ -161,8 +161,10 @@ ul.simplefilter {
 			<div class="w3-display-right"><a href="#"><b>show more...</b></a></div>
 		</div>
 	</div>
-
-<script src="js/jquery.filterizr.js"></script>  
+<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		function hideURLbar(){ window.scrollTo(0,1); } </script>
+<script type="text/javascript" src="js/jquery-2.1.4.min.js"></script>
+<script src="js/jquery.filterizr.js"></script> 
 <script src="js/controls.js"></script>
 <script type="text/javascript">
 	$(function() {

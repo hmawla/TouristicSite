@@ -1,4 +1,9 @@
-<?php session_start(); ?>
+<?php 
+session_start();
+	$u_id = $_SESSION['id'];
+	$u_name = $_SESSION['username'];
+
+ ?>
 
 <!doctype html>
 <html>
@@ -35,9 +40,9 @@
 
 <!-- Text input-->
 <div class="form-group">
-  <label class="col-md-4 control-label" for="username">Enter username:</label>  
+  <label class="col-md-4 control-label" for="username">Username:</label>  
   <div class="col-md-4">
-  <input id="username" name="username" type="text" placeholder="first name" class="form-control input-md" >
+  <input id="username" name="username" type="text" value="<?php echo $u_name; ?>"class="form-control input-md" readonly/ >
     
   </div>
 </div>
@@ -46,7 +51,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="op">Enter Old Password:</label>  
   <div class="col-md-4">
-  <input id="password" name="password" type="text" placeholder="last name" class="form-control input-md" required="">
+  <input id="password" name="password" type="text" placeholder="Enter old password" class="form-control input-md" required="">
     
   </div>
     </div>
@@ -54,7 +59,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="newpassword">Enter New Password:</label>  
   <div class="col-md-4">
-  <input id="newpassword" name="newpassword" type="text" placeholder="last name" class="form-control input-md" required="">
+  <input id="newpassword" name="newpassword" type="text" placeholder="Enter new password" class="form-control input-md" required="">
     
   </div>
 </div>
@@ -62,7 +67,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="confirmnewpassword">Confirm New Password:</label>  
   <div class="col-md-4">
-  <input id="confirmnewpassword" name="confirmnewpassword" type="text" placeholder="last name" class="form-control input-md" required="">
+  <input id="confirmnewpassword" name="confirmnewpassword" type="text" placeholder="Confirm New Password" class="form-control input-md" required="">
     
   </div>
 </div>

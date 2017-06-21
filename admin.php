@@ -135,6 +135,7 @@
 			<div>
 				<ul class="nav navbar-nav changecolor1">
 					<li ><a href="index.php" >Home</a></li>
+                    <li ><a href="changepassword.php"target="_blank" >change password</a></li>
 				</ul>
 				<ul class="nav navbar-nav changecolor1 w3-display-right">
 					<li><a href="logout.php"><span class="glyphicon glyphicon-log-in"></span> logout</a></li>
@@ -154,14 +155,14 @@
         <div class="useravatar">
             <img alt="" src="images/logo1.png">
         </div>
-        <div class="card-info"> <span class="card-title"><?php echo  $_SESSION['Username'] ; ?></span>
+        <div class="card-info"> <span class="card-title"><?php echo  $_SESSION['username'] ; ?></span>
 
         </div>
     </div>
     <div class="btn-pref btn-group btn-group-justified btn-group-lg" role="group" aria-label="...">
         <div class="btn-group" role="group">
-            <button type="button" id="stars" class="btn btn-primary" href="#tab1" data-toggle="tab"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-                <div class="hidden-xs">Manage advertiser account</div>
+            <button type="button" id="stars" class="btn btn-primary" href="#tab1" data-toggle="tab"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+                <div class="hidden-xs">Manage Advertiser Account</div>
             </button>
         </div>
         <div class="btn-group" role="group">
@@ -170,13 +171,13 @@
             </button>
         </div>
         <div class="btn-group" role="group">
-            <button type="button" id="following" class="btn btn-default" href="#tab3" data-toggle="tab"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
+            <button type="button" id="following" class="btn btn-default" href="#tab3" data-toggle="tab"><span class="glyphicon glyphicon-book" aria-hidden="true"></span>
                 <div class="hidden-xs">Manage the advertisement</div>
             </button>
         </div>
 		<div class="btn-group" role="group">
-            <button type="button" id="following" class="btn btn-default" href="#tab4" data-toggle="tab"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-                <div class="hidden-xs">send verification</div>
+            <button type="button" id="following" class="btn btn-default" href="#tab4" data-toggle="tab"><span class="glyphicon glyphicon-envelope" aria-hidden="true"></span>
+                <div class="hidden-xs">INBOX</div>
             </button>
         </div>
 	</div>
@@ -184,20 +185,13 @@
     <div class="well">
       <div class="tab-content">
         <div class="tab-pane fade in active" id="tab1">
-          
-	<!--      admin user control          -->	  
-		  
-
-
-
-
-<center>
-<p>
+		
+<h2>  Search for a User	 </h2>	
 <form method="POST" action="#">
-<input type="text" name="u_s" placeholder="Search Of User Name" size="50" id="s_u"/>
+<input type="text" name="username" placeholder="Search Of User Name" size="50" id="username"/>
 <input type="submit" value="Search"/>
 </form>
-<?php
+		<?php
 if(isset($_POST['username']))
 // Search with USER
  if (!$conn) {
@@ -207,12 +201,9 @@ if(isset($_POST['username'])){
 {
 $search = $_POST['username'];
 if($search !=""){
-$sql = "SELECT * FROM person where username = '$search'";
+$sql = "SELECT * from person WHERE username LIKE '%$search%'";
 $result = mysqli_query($conn, $sql);
 
-if (@mysqli_num_rows($result) <= 0){
-echo "<br/><b>No Record</b>";
-}
 
 if (@mysqli_num_rows($result) > 0){
 ?>
@@ -221,8 +212,7 @@ if (@mysqli_num_rows($result) > 0){
 <tr>
  <th width="35%">User Full Name</th>
  <th width="35%">User Name</th>
-
- <th width="15%">User Type</th>
+ <th width="15%">Active</th>
  <th width="15%">Block</th>
  <th width="15%">unBlock</th>
 </tr>       
@@ -232,27 +222,25 @@ if (@mysqli_num_rows($result) > 0){
 <tr>
   <td><?php echo $rows['pfname'].' '.$rows['pfathername'].' '.$rows['plname']; ?></td>
   <td><?php echo $rows['username'];?></td>
-  <td><?php echo $rows['email'];?></td>
-  <td><?php $r =$rows['pertype'];
+  <td><?php  $r =$rows['block'];
   switch  ($r){
-		case "A":
-        echo "admin";
+		case "1":
+        echo "InActive";
         break;
-		case "C":
-        echo "Student";
-		default:
+		case "0":
+        echo "Active";
         break;
   }
   ?>
   </td>
   <td align="center">
   	 <form method="POST" action="user_manage_process.php">
-  	 <button name="b" value="<?php echo $rows["id"]; ?>"><img src="/images/skype.png" height="20" width="15"/></button>
+  	 <button name="b" value="<?php echo $rows["id"]; ?>"><i class="glyphicon glyphicon-ban-circle"></i></button>
      </form>
      </td>
      <td align="center">
      <form method="POST" action="user_manage_process.php">
-  	 <button name="ub" value="<?php echo $rows["id"]; ?>"><img src="/images/skype.png" height="20" width="15"/></button>
+  	 <button name="ub" value="<?php echo $rows["id"]; ?>"><i class="glyphicon glyphicon-ok-sign"></i></button>
      </form>
      </td>
 </tr>
@@ -261,87 +249,58 @@ if (@mysqli_num_rows($result) > 0){
  }
 ?>
 </table>
-<?php
-// Check connection
-  if (!$conn) {
-    die("Connection failed: " . mysqli_connect_error());
-}
-$sql = "SELECT * from person";
+<br><br>
+<h2>All Users </h2>
+    
+<?php  
+$sql = "SELECT * from person ";
+$result = mysqli_query($conn, $sql);	
 
-$result = @mysqli_query($conn, $sql);
-if (@mysqli_num_rows($result) < 0) 
-// output data of each row
-	echo "No records";
-else { 
- 
-if (@mysqli_num_rows($results) <= 0)
-{
+if (@mysqli_num_rows($result) <= 0){
+echo "<br/><b>No Record</b>";
+}
+
+if (@mysqli_num_rows($result) > 0){
 ?>
-</table>
-<!--Users Table-->
-<?php
-//Table to display users table
-?>
-<p>
+	<!--      admin user control          -->	  
 <table border="1" cellpadding="0" width="50%">
 <tr>
  <th width="35%">User Full Name</th>
  <th width="35%">User Name</th>
- 
- <th width="15%">User Type</th>
+ <th width="15%">Active</th>
  <th width="15%">Block</th>
  <th width="15%">unBlock</th>
-</tr>       
-<?php
-while($rows = mysqli_fetch_assoc($result)) {
-?>
+</tr>   
+<?php 
+ while($rows=mysqli_fetch_assoc($result)) {
+?>	 
 <tr>
   <td><?php echo $rows['pfname'].' '.$rows['pfathername'].' '.$rows['plname']; ?></td>
   <td><?php echo $rows['username'];?></td>
-
-  <td><?php $r =$rows['pertype'];
+  <td><?php  $r =$rows['block'];
   switch  ($r){
-		case "A":
-        echo "admin";
+		case "1":
+        echo "InActive";
         break;
-		case "c":
-        echo "user";
-			default:
+		case "0":
+        echo "Active";
+        break;
   }
   ?>
-  </td>  
-  <td align="center">
-     <form name="frm_block" id="frm_block" method="POST" action="user_manage_process.php">
-  	 <button name="b" value="<?php echo $rows["u_ID"]; ?>">
-     		<img src="/images/skype.png" height="25" width="20" /></button>
-     </form>
   </td>
-  <td>
+   <td align="center">
+  	 <form method="POST" action="user_manage_process.php">
+  	 <button name="b" value="<?php echo $rows["id"]; ?>"><i class="glyphicon glyphicon-ban-circle"></i></button>
+     </form>
+     </td>
+     <td align="center">
      <form method="POST" action="user_manage_process.php">
-  	 <button name="ub" value="<?php echo $rows["u_ID"]; ?>">
-     		<img src="/images/skype.png" height="25" width="20"/></button>
+  	 <button name="ub" value="<?php echo $rows["id"]; ?>"><i class="glyphicon glyphicon-ok-sign"></i></button>
      </form>
-  </td>
-</tr>
-<?php }}} 
-@mysqli_close($conn);
-?>
+     </td>
+  </tr>
+ <?php }}?>
 </table>
-<?php
-if(isset($_SESSION['block']))
-{
-	echo $_SESSION['block'];
-		 $_SESSION['block'] = "";
-}
-if(isset($_SESSION['unblock']))
-{
-	echo $_SESSION['unblock'];
-		 $_SESSION['unblock'] = "";
-}
-?>
-</body>
-</html>	  
-		  
 		  
 		  
 		  
@@ -349,7 +308,8 @@ if(isset($_SESSION['unblock']))
 			  
         </div>
         <div class="tab-pane fade in" id="tab2">
-          <h3><?php require_once("blockunblock.php")?></h3>
+     <button><a  href="payment.php" target="_blank">click to pay</a></button>
+		 
         </div>
         <div class="tab-pane fade in" id="tab3">
           <h3>This is tab 3</h3>

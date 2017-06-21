@@ -1,10 +1,10 @@
 
 
 
-<nav class="navbar navbar-default  changecolor ">
+<nav class="navbar navbar-default  changecolor navbar-fixed-top ">
     <div class="container">
         <div class="navbar-header">
-			<image src="images/logo1.png" class="changesize" href="#" />
+			<image src="images/logo1.png" class="changesize" href="index.php" />
 			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 				<span class="sr-only">Toggle navigation</span>
 				<span class="icon-bar"></span>
@@ -17,7 +17,7 @@
 		
 				<ul class="nav navbar-nav changecolor1">
 					
-					<li class="active" ><a href="#">Home</a></li>
+					<li class="active" ><a href="index.php">Home</a></li>
 					<li><a onclick="scrollWin()" href="#scrollWin()">About</a></li>
 					<li><a href="#contactus">Contact</a></li>
 					<li class="dropdown">
@@ -49,9 +49,9 @@
 						</ul>
 					</li>
 				</ul>
-					<form class="navbar-form navbar-right">
+					<form class="navbar-form navbar-right"action="searcher.php" >
 						<div class="form-group">
-							<input id="searcher" type="text" placeholder="Search" class="form-control">
+						<label>click to search</label>
 						</div>
 						<button type="submit" class="btn btn-success" style="background-color: #00bbff; color:black"><i class="glyphicon glyphicon-search"></i></button>
 					</form>

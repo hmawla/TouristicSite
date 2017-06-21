@@ -1,5 +1,5 @@
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<link rel="stylesheet" href="http://cdn.bootcss.com/animate.css/3.5.1/animate.min.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/animate.min.css">
 <link rel="stylesheet" type="text/css" href="css/slider.css" />
 <script type="text/javascript" src="js/slider.js"></script>
 <div id="first-slider">
@@ -23,8 +23,8 @@
                 </div></div>
              </div> 
             <!-- Item 2 -->
-            <div class="item slide2">
-                <div class="row"><div class="container">
+            <div class="item slide2" style="background-image: url(images/3.jpg)">
+                <div class="row"><div class="container" >
                     <div class="col-md-7 text-left">
                         <h3 data-animation="animated bounceInDown"> 50 animation options A beautiful</h3>
                         <h4 data-animation="animated bounceInUp">Create beautiful slideshows </h4>
@@ -32,7 +32,7 @@
                 </div></div>
             </div>
             <!-- Item 3 -->
-            <div class="item slide3">
+            <div class="item slide3" style="background-image: url(images/3.jpg)">
                 <div class="row"><div class="container">
                     <div class="col-md-7 text-left">
                         <h3 data-animation="animated bounceInDown">Simple Bootstrap Carousel</h3>
@@ -41,7 +41,7 @@
                 </div></div>
             </div>
             <!-- Item 4 -->
-            <div class="item slide4">
+            <div class="item slide4" style="background-image: url(images/3.jpg)">
                 <div class="row"><div class="container">
                     <div class="col-md-7 text-left">
                         <h3 data-animation="animated bounceInDown">We are creative</h3>

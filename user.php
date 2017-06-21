@@ -1,16 +1,20 @@
-	
-    <?php session_start();
+<?php
+require_once('Connections/conn.php');
+ session_start();
 	$id = $_SESSION['si'];
 	if( $id != 1)
 	{
 		header('location:index.php');
 	}
+	$u_id = $_SESSION['id'];
+	$u_name = $_SESSION['username'];
 	?>
 	<link rel="stylesheet" type="text/css" href="css/style.css" />
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/>
 		<link rel="stylesheet" type="text/css" href="css/colorbox.css" />
 		<link rel="stylesheet" type="text/css" href="css/mystyle.css" />
+        <link rel="stylesheet" type="text/css" href="css/range.css" />
 		<script type="text/javascript" src="jQuery/jquery.js"></script>
 		<script type="text/javascript" src="jQuery/bootstrap.js"></script>
 		<script>
@@ -130,7 +134,7 @@
 			<div>
 				<ul class="nav navbar-nav changecolor1">
 					<li ><a href="index.php" >Home</a></li>
-					<li ><a href="changepassword.php" >change password</a></li>
+					<li ><a href="changepassword.php" target="_blank">change password</a></li>
 				</ul>
 				<ul class="nav navbar-nav changecolor1 w3-display-right">
 					<li><a href="logout.php"><span class="glyphicon glyphicon-log-in"></span> logout</a></li>
@@ -150,43 +154,164 @@
         <div class="useravatar">
             <img alt="" src="images/4.jpg">
         </div>
-        <div class="card-info"> <span class="card-title"><?php echo  $_SESSION['Username'] ; ?></span>
+        <div class="card-info"> <span class="card-title"><?php echo  $_SESSION['username'] ; ?></span>
 
         </div>
     </div>
     <div class="btn-pref btn-group btn-group-justified btn-group-lg" role="group" aria-label="...">
         <div class="btn-group" role="group">
             <button type="button" id="stars" class="btn btn-primary" href="#tab1" data-toggle="tab"><span class="glyphicon glyphicon-star" aria-hidden="true"></span>
-                <div class="hidden-xs">make adss</div>
+                <div class="hidden-xs">Manage Ads</div>
             </button>
         </div>
         <div class="btn-group" role="group">
             <button type="button" id="favorites" class="btn btn-default" href="#tab2" data-toggle="tab"><span class="glyphicon glyphicon-heart" aria-hidden="true"></span>
-                <div class="hidden-xs">Send payment</div>
+                <div class="hidden-xs">make Ads</div>
             </button>
         </div>
         <div class="btn-group" role="group">
             <button type="button" id="following" class="btn btn-default" href="#tab3" data-toggle="tab"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-                <div class="hidden-xs">edit ADS</div>
+                <div class="hidden-xs">send payment</div>
             </button>
         </div>
 		<div class="btn-group" role="group">
             <button type="button" id="following" class="btn btn-default" href="#tab4" data-toggle="tab"><span class="glyphicon glyphicon-user" aria-hidden="true"></span>
-                <div class="hidden-xs">choose page type</div>
+                <div class="hidden-xs">Inbox</div>
             </button>
         </div>
     </div>
 
         <div class="well">
       <div class="tab-content">
-        <div class="tab-pane fade in active" id="tab1">
-          <h3>This is tab 1</h3>
+        <div class="tab-pane fade in active" id="tab1" style="background-color:#FFFFFF">
+          <!---->
+          
+          
+          
+                   <div class="container">
+        <h3>Your ads</h3>
+        <!--dropdown menu-->
+        <!--<div class="dropdown">
+            <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Dropdown Example
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                <li><a href="#"><span class="glyphicon glyphicon-plus-sign"></span>New Entry</a></li>
+                <li role="seperator" class="divider"></li>
+                <li><a href="#">category 1</a></li>
+                <li><a href="#">category 2</a></li>
+            </ul>
         </div>
-        <div class="tab-pane fade in" id="tab2">
-          <h3>This is tab 2</h3>
+        <br><br>-->
+        <!--table-->
+       <table class="table table-striped">
+       <?php
+       $sql = "select * from ads where id = $u_id";
+	   $result = mysqli_query($conn, $sql);
+		
+       if (@mysqli_num_rows($result) > 0){
+       ?>
+	   <thead>
+            <tr class="info">
+                <th>Ads Name</th>
+                <th>Start date</th>
+                <th>Duration</th>
+                <th>Description</th>
+                <th>Ads Status</th>
+                <th>Renew</th>
+                <th>Stop</th>
+            </tr>
+        </thead>       
+<?php 
+ while($rows=mysqli_fetch_assoc($result)) {
+	?>
+<td><?php echo $rows["adsname"]; ?></td>
+<td><?php echo $rows["start_date"]; ?></td>
+<td><?php echo $rows["duration"] . " " . "months"; ?></td>
+<td><?php echo $rows["description"]; ?></td>
+<td><?php  $r =$rows['ads_state'];
+  switch  ($r){
+		case "1":
+        echo  "proceeded";
+        break;
+		case "0":
+        echo "Ended";
+        break;
+  }
+  ?></td>
+   <td align="center">
+  	 <form method="POST" action="ads_manage_process.php">
+  	 <button name="re" value="<?php echo $rows["adsid"]; ?>"><i class="glyphicon glyphicon-ban-circle"></i></button>
+     </form>
+     </td>
+     <td align="center">
+     <form method="POST" action="ads_manage_process.php">
+  	 <button name="s" value="<?php echo $rows["adsid"]; ?>"><i class="glyphicon glyphicon-stop"></i></button>
+     </form>
+     </td>
+<?php
+ }}?>
+    </table>
+    </div>      
+          
         </div>
-        <div class="tab-pane fade in" id="tab3">
-          <h3>This is tab 3</h3>
+
+
+
+        <div class="tab-pane fade in" id="tab2">     		
+            
+            
+            <div class="row">
+            <div class="col-sm-8">
+                <form name="frmupload" method="post" action="upload_ads.php" enctype="multipart/form-data">
+                    <div class="form-group float-label-control">
+                        <label for="">Ads Name:</label>
+                        <input type="text" name="adsname" class="form-control" placeholder="Ads Name">
+                    </div>
+                    <div class="form-group float-label-control">
+                        <label>Start  date:</label>
+                        <input type="date" name="s_dte" class="form-control">
+                    </div>
+                    <div class="form-group float-label-control">
+                        <label>Duration:</label>
+     <div class="row">
+      <div class="col-xs-6">
+          <div class="range range-info">
+            <input type="range" name="range" min="1" max="12" value="6" onchange="rangeInfo.value=value">
+            <output id="rangeInfo">6</output>
+          </div>
+        </div>
+</div></div>
+                    
+      <div class="form-group float-label-control">
+                        <label>Description:</label>
+                        <input type="text" name="desc" class="form-control" placeholder="Description">
+      </div>
+      <div class="form-group float-label-control">
+                        <label>Uploaded files:</label>
+                        <input type="file" name="Upload" class="form-control" multiple>
+      </div>
+      
+    <center>
+             <button name="uploaded">Uploaded</button>
+    
+      
+      
+      
+      
+      
+      </form>
+</div></div>
+        </div>
+        <div class="tab-pane fade in" id="tab3"  >
+
+         
+         
+             <h3>This is tab 3</h3>
+         
+         
+         
+         
         </div>
 		<div class="tab-pane fade in" id="tab4">
           <h3>This is tab 4</h3>
@@ -195,6 +320,3 @@
     </div>
 </div>
 </div>
-            
-    
-

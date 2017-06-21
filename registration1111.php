@@ -1,4 +1,7 @@
+<?php   
+session_start();
 
+?>
 <!doctype html>
 <html>
 	<head>
@@ -17,6 +20,16 @@
 			  fixed-top;
 		  }
 		  </style>
+		   	    <script type="text/javascript">
+        function DateControl(){
+			var x = new Date(document.getElementById("DOB").value);
+			var d = new Date();
+			
+            if (eval(x.getFullYear()) > (eval(d.getFullYear()) - 18) || (x > d) ){
+               alert("YOur age sgould be more than 18!");
+		       document.getElementById("DOB").value = "";
+        }}
+			</script>
 	</head>
 	<body style="background-color: #222222;background-image: URL('images/bgg.jpg'); background-position: center;background-repeat: no-repeat;">
 	
@@ -75,7 +88,19 @@
     </div>
 </nav>
 <!-- ------------------------------------------------------------------- -->
+
 <br><br><br>
+<?php
+if(isset($_SESSION['userexits']))
+{
+	?>
+	<label class="col-md-4 control-label" for="phone"><?php echo  $_SESSION['userexits']; ?></label>	
+<?php
+$_SESSION['userexits']="";
+}	
+?>
+
+
 <p style="text-align:center;font-size: 40px;;font-family:FontAwesome;color:grey;" class="field">Signup For Advertisement <p>
 <form class="form-horizontal" action="adduser.php" method="POST"  name="form1" acceptcharset="UTF-8">
 
@@ -132,7 +157,7 @@
 <div class="form-group">
   <label class="col-md-4 control-label" for="dob">DOB</label>  
   <div class="col-md-4">
-  <input id="DOB" name="DOB" type="Date" placeholder="your birth date" class="form-control input-md" required="">
+  <input id="DOB" name="DOB" type="Date" placeholder="your birth date" class="form-control input-md" required="" onchange="DateControl()">
     
   </div>
 </div>
@@ -162,6 +187,7 @@
 
 <!-- Text input-->
 <div class="form-group">
+
   <label class="col-md-4 control-label" for="phone">user-name</label>  
   <div class="col-md-4">
   <input id="username" name="username" type="text" placeholder="user-name" class="form-control input-md" required="" min="5">

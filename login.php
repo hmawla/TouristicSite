@@ -8,7 +8,7 @@
                }else if(x == 2){
                    alert("Welcome User!");
                }else{
-                   alert("Fuck Off!");
+                   alert("invalid username or password");
                }
         }
     </script>
@@ -19,6 +19,10 @@ session_start();
 $username = $_POST['username'];
 $password = $_POST['password'];
 $IsLogin = 0;
+
+
+  
+
 
 if (!function_exists("GetsqlValueString")) {
     function GetsqlValueString($theValue, $theType, $theDefinedValue = "", $theNotDefinedValue = "") 
@@ -53,65 +57,50 @@ if (!function_exists("GetsqlValueString")) {
 //$colpassword_rsLogin = md5($colpassword_rsLogin);
 
 //echo $colpassword_rsLogin;
-$sql = "SELECT id, username, password, pertype FROM person WHERE username = '" . $username . "' AND password = '" . $password . "'";
+$sql = "SELECT id, username, password, block, pertype FROM person WHERE username = '" . $username . "' AND password = '" . $password . "'";
 $result = mysqli_query($conn, $sql) or die(mysqli_error($conn));
 
 if (mysqli_num_rows($result) > 0) {
-    // output data of each row
-    $row = mysqli_fetch_assoc($result);
-    if($row["username"] == $username){
-        if($row["pertype"] == "A"){
-            $IsLogin = 2;
+	while ($row = mysqli_fetch_array($result, MYSQLI_ASSOC)){
+	
+	$_SESSION['id'] = $row['id'];
+	$_SESSION['username'] = $username;
+	
+	// output data of each row
+    //$row = mysqli_fetch_assoc($result);
+	 if( $row["block"] == 1 ){
+		 
+		   echo "<script>
+						alert('This User is already blocked please contact us for more info!');
+				window.location = 'index.php';
+				</script>";
+		   
+							 }
+    else if( $row["username"] == $username && $row["block"] == 0 ){       
+	  
+	   if($row["pertype"] == "A"){
+           // $IsLogin = 2;
             $_SESSION['valid'] = 2;
-            echo "<script>farid(1);</script>";
+            //echo "<script>farid(1);</script>";
             header('Location:admin.php');
         }else{
-            $IsLogin = 1;
+			
+            //$IsLogin = 1;
             $_SESSION['si'] = 1;
-            echo "<script>farid(2);</script>";
             header('Location:user.php');
         }
-    }
-        
-}else{
+	}
+}    } 
+  else{
     $IsLogin = 0;
-   // echo "<script>farid(3);</script>";
-    header('Location:index.php');
+	echo "<script>alert('invalid username or password');
+	             window.location = 'index.php';
+	      </script>" ;
+   
+   
 }
 
-//$rsLogin = mysqli_query( $conn, $query_rsLogin) or die(mysqli_error($conn));
-/* $row_rsLogin = mysqli_fetch_assoc($rsLogin);
-$totalRows_rsLogin = mysqli_num_rows($rsLogin);
 
-	if ($totalRows_rsLogin > 0 )
-	{
-		
-		
-		$_SESSION['Username'] = $row_rsLogin['username'];
-
-		
-		
-		if($row_rsLogin['pertype'] == 'A')
-		{
-			 $_SESSION['valid'] = "ok";
-			
-					header('Location:admin.php');
-		}
-		elseif ($row_rsLogin['pertype'] == 'C')
-		{
-			$_SESSION['user'] =$colname_rsLogin;
-				$_SESSION['pass'] =$colpassword_rsLogin;
-				$_SESSION['si'] ="ok";
-				header('Location:user.php');	
-		}
-	
-	
-	}
-	else
-	{
-		echo '<script>farid();</script>';
-	}
-} */
 ?>
 
 

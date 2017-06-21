@@ -1,9 +1,8 @@
-
+$_SESSION['$userexits'] = $userexits ;
 <?php require_once('Connections/conn.php'); ?>
 <?php
 session_start();
-$userexits = "";
-
+$_SESSION['userexits'] = "";
 $editFormAction = $_SERVER['PHP_SELF'];
 if (isset($_SERVER['QUERY_STRING'])) {
   $editFormAction .= "?" . htmlentities($_SERVER['QUERY_STRING']);
@@ -11,15 +10,14 @@ if (isset($_SERVER['QUERY_STRING'])) {
 
 if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) {
 	 mysqli_select_db( $conn  , $dbname );
+	
 	$sqli = "select * from person where username = '".$_POST['username']."'" ;
-	$Result1 = mysqli_query(  $conn  , $sqli    ) or die(mysqli_error($conn));
+	$Result = mysqli_query(  $conn  , $sqli    ) or die(mysqli_error($conn));
 	
 
 	
-	if (mysqli_num_rows($Result1) == 0)
+	if (mysqli_num_rows($Result) == 0)
 	{
-	
-	
   $insertsqlii = sprintf("INSERT INTO person (pfname, plname, pfathername, email, phone, address, block, pertype, username, password, DOB, gender) VALUES ('%s', '%s', '%s', '%s', '%s','%s', '%s', '%s', '%s', '%s', '%s','%s')",
                        $_POST['fname'],
                        $_POST['lname'],
@@ -36,12 +34,14 @@ if ((isset($_POST["MM_insert"])) && ($_POST["MM_insert"] == "form1")) {
 					   );
 
   
-  				$Result1 = mysqli_query(  $conn  , $insertsqlii   ) or die(mysqli_error( $conn ));
+  				$Result1 = mysqli_query(  $conn  , $insertsqlii) or die(mysqli_error( $conn ));
+				
 	}
 	  else
 	  {
-		  $userexits = "User Already exists";
+		  $a = "<script>alert('User Already exists');</script>";
+		  $_SESSION['userexits'] = $a;
 	  }
-  
+  header('location:Registration1111.php');
 }
 ?>
